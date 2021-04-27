@@ -6,7 +6,7 @@ title: Ariel S. Boiardi
 superuser: true
 
 # Role/position/tagline
-role: MSc in Mathematics
+role: M.Sc. in Mathematics
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -18,17 +18,20 @@ bio:
 
 # Interests to show in About widget
 interests:
-- Applied Mathematics 
-- Numerical Mathematics
-- Mathematical Physics
+- Numerical mathematics 
+- Isogeometric analysis
+- Integral equations
+# - Computational geometry
+- Mathematical physics
+- Computational science
 
 # Education to show in About widget
 education:
   courses:
-  - course: MSc in Mathematics
+  - course: M.Sc. in Mathematics
     institution: Università di Parma
-    year: 2021
-  - course: BSc in Mathematics
+    year: 2021 (expected)
+  - course: B.Sc. in Mathematics
     institution: Università di Parma
     year: 2019
 
@@ -60,4 +63,4 @@ highlight_name: false
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
 
-Download my {{< staticref "Boiardi_Ariel_S_CV_EN.pdf" "newtab" >}}resumé{{< /staticref >}}.
+Download my {{< staticref "authors/admin/Boiardi_Ariel_S_CV_EN.pdf" "newtab" >}}resumé{{< /staticref >}}.

@@ -10,7 +10,7 @@ headless: true
 weight: 40
 
 title: Experience
-subtitle:
+subtitle: really not much
 
 # Date format for experience
 #   Refer to https://wowchemy.com/docs/customization/#date-format
@@ -22,28 +22,26 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
-    company_url: ''
-    company_logo: org-gc
-    location: California
-    date_start: '2021-01-01'
+
+  - title: Tutor for the course of Numerical Calculus (Bachelor programme in Computer Science)
+    company: Dipartimento di Scienze Matematiche, Fisiche e Informatiche, Università di Parma 
+    company_url: 'https://smfi.unipr.it/it'
+    company_logo: 
+    location: Parma
+    date_start: '2021-03-01'
     date_end: ''
     description: |2-
-        Responsibilities include:
-        
-        * Analysing
-        * Modelling
-        * Deploying
-        
-  - title: Professor of Semiconductor Physics
-    company: University X
-    company_url: ''
-    company_logo: org-x
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2020-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
+      Materials produces for the studens are availlable in the [teaching section](#teaching) (in italian)
+
+  - title: Tutor for the course of Numerical Analysis (Bachelor programme in Mathematics)
+    company: Dipartimento di Scienze Matematiche, Fisiche e Informatiche, Università di Parma 
+    company_url: 'https://smfi.unipr.it/it'
+    company_logo: 
+    location: Parma
+    date_start: '2020-03-01'
+    date_end: '2020-06-01'
+    description: |2-
+
 
 design:
   columns: '2'
