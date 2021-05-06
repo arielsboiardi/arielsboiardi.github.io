@@ -61,6 +61,9 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+This page is under construction!
+
+I am Ariel S. Boiardi, currently a master student in Mathematics at University of Parma (Italy).
+
 
 Download my {{< staticref "authors/admin/Boiardi_Ariel_S_CV_EN.pdf" "newtab" >}}resumé{{< /staticref >}}.
