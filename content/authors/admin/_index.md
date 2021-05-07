@@ -61,7 +61,10 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 ---
+{{% callout note %}}
 This page is under construction!
+{{% /callout %}}
+
 
 I am Ariel S. Boiardi, currently a master student in Mathematics at University of Parma (Italy).
 
