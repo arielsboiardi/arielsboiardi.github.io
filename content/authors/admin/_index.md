@@ -6,7 +6,7 @@ title: Ariel S. Boiardi
 superuser: true
 
 # Role/position/tagline
-role: B.Sc. in Mathematics
+role: Master's student in Mathematics
 
 # Organizations/Affiliations to show in About widget
 organizations:
