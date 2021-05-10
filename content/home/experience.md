@@ -31,7 +31,7 @@ experience:
     date_start: '2021-03-01'
     date_end: ''
     description: |2-
-      Materials produces for the studens are availlable in the [teaching section](#teaching) (in italian)
+      Materials produces for the studens are availlable in the [teaching section](/teaching) (in italian)
 
   - title: Tutor for the course of Numerical Analysis (Bachelor programme in Mathematics)
     company: Dipartimento di Scienze Matematiche, Fisiche e Informatiche, Università di Parma 
