@@ -15,5 +15,5 @@ header:
 ---
 For this course I curated solutions of exercises for the students to reference
 
-- [ WS6: quadrature formulas ]( AN_201920_WS6.pdf )
-- [ WS7: numerical methods for ODEs]( AN_201920_WS7.pdf )
+<!-- - [ WS6: quadrature formulas ]( AN_201920_WS6.pdf )
+- [ WS7: numerical methods for ODEs]( AN_201920_WS7.pdf ) -->

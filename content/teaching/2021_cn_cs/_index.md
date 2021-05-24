@@ -15,6 +15,6 @@ header:
 ---
 For this course I curated exercises for the students to work out on their own
 
-- [ Ex1: floating point operations, approximations of $\pi$, non-linear solvers ]( CN_info_202021_PROP1.pdf )
+<!-- - [ Ex1: floating point operations, approximations of $\pi$, non-linear solvers ]( CN_info_202021_PROP1.pdf )
 - [ Ex2: arrays in MATLAB, condition number, permutation matrices]( CN_info_202021_PROP2.pdf )
-- [ Ex3: algebraic formulation of gaussian elimination method, construction of LU factorization, LU factorization with pivoting, other algorithms for the LU factorization]( CN_info_202021_PROP3.pdf )
+- [ Ex3: algebraic formulation of gaussian elimination method, construction of LU factorization, LU factorization with pivoting, other algorithms for the LU factorization]( CN_info_202021_PROP3.pdf ) -->
