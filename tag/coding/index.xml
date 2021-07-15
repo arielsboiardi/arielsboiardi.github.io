@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Coding | Ariel S. Boiardi</title><link>https://arielsboiardi.github.io/tag/coding/</link><atom:link href="https://arielsboiardi.github.io/tag/coding/index.xml" rel="self" type="application/rss+xml"/><description>Coding</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 Ariel S. Boiardi</copyright><lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><image><url>https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_512x512_fill_lanczos_center_2.png</url><title>Coding</title><link>https://arielsboiardi.github.io/tag/coding/</link></image><item><title>Visual Studio 2019 for Fortran development on Windows</title><link>https://arielsboiardi.github.io/post/fortran-on-windows/</link><pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/post/fortran-on-windows/</guid><description>&lt;ul>
+&lt;li>&lt;a href="#introduction">Introduction&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#fortran-compilers">Fortran compilers&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#the-visual-studio-ide">The Visual Studio IDE&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#key-features">&lt;strong>Key features&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#key-annoyances">&lt;strong>Key annoyances&lt;/strong>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#installation">Installation&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#installing-visual-studio">Installing Visual Studio&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#installing-intel-fortran">Installing Intel Fortran&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#checking-the-configuration">Checking the configuration&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#general-guidelines-about-visual-studio-2019">General guidelines about Visual Studio 2019&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#compiling-a-complex-code-library">Compiling a complex code library&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#program-unit-and-subroutines-are-all-in-one-file">&lt;strong>Program unit and subroutines are all in one file&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#code-with-modules-in-separate-files">&lt;strong>Code with modules in separate files&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#code-with-modules-in-a-shared-library">&lt;strong>Code with modules in a shared library&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#programs-exchanging-files">&lt;strong>Programs exchanging files&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#compilation-of-parallel-code-using-mpi">&lt;strong>Compilation of parallel code using MPI&lt;/strong>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#conclusion">Conclusion&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>&lt;em>NOTE:&lt;/em>&lt;/strong> This guide was tested with the latest versions of the software at the time of writing, that is Visual Studio 2019 and Intel Fortran Compiler version 2021.3.0&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>As of today Fortran is still one of the leading programming languages for high performance and scientific computing; on the other hand HPC and scientific computing are still a highly specialized niche and, as a result, not many user friendly tools are available for Fortran development.&lt;/p>
+&lt;p>In this guide Visual Studio 2019 combined with the Intel Fortran compiler is proposed as a &lt;em>do-it-all&lt;/em> Fortran IDE for Windows.
+On Linux many different, arguably better, alternatives are available.&lt;/p>
+&lt;h3 id="fortran-compilers">Fortran compilers&lt;/h3>
+&lt;p>Various Fortran compilers are available, a &lt;a href="https://fortran-lang.org/learn/os_setup" target="_blank" rel="noopener">comprehensive list&lt;/a> is available on the &lt;a href="https://fortran-lang.org/" target="_blank" rel="noopener">web site of the Fortran Programming Language&lt;/a>.&lt;/p>
+&lt;p>I used the following two compilers&lt;/p>
+&lt;ul>
+&lt;li>GNU Fortran, or gfortran, part of the GNU Compiler Collection (GCC), is a Free and Open Source Fortran compiler which is still under active development and supports all the features of the latest Fortran 2018 standard. gfortran is natively available on Linux and MacOS; it is possible to get it on Windows with Windows Subsystem for Linux (WSL) and other workarounds.&lt;/li>
+&lt;li>The Intel Fortran Compiler (ifort) is a proprietary compiler developed by Intel; it can be used free of charge for non commercial uses as a part of the Intel oneAPI HPC Toolkit. Intel Fortran is natively available on all platforms; but on Windows is virtually the only free option, thanks to the integration with Visual Studio.&lt;/li>
+&lt;/ul>
+&lt;h3 id="the-visual-studio-ide">The Visual Studio IDE&lt;/h3>
+&lt;p>Microsoft Visual Studio 2019 (VS for now on) is a complete and feature rich general purpose IDE; being general purpose it does not natively support Fortran development or other features which might be of interest in the context of scientific computing and, in particular, development of numerical analysis codes.
+Fortunately though the integration with Intel compiler and diagnostics tools makes it a viable option for our use case.
+VS is closed source and commercial software, but the &lt;em>community edition&lt;/em> is free to use for non commercial purpose with a Microsoft account, the minimal functional limitation of this edition are not of any relevance for our use case.&lt;/p>
+&lt;h4 id="__key-features__">&lt;strong>Key features&lt;/strong>&lt;/h4>
+&lt;p>The key features that I found interesting are:&lt;/p>
+&lt;ul>
+&lt;li>Automatic determination of compilation order: on Linux I used the &lt;a href="https://www.gnu.org/software/make/" target="_blank" rel="noopener">&lt;code>make&lt;/code>&lt;/a> utility to compile and link the various components of my code; on Windows, due to my poor knowledge of its shell and lack of basic tools, I was not able to use &lt;code>make&lt;/code>. This was the main reason I resorted to Visual Studio in the first place.&lt;/li>
+&lt;li>Support for debugging, signally
+&lt;ul>
+&lt;li>Execution pause&lt;/li>
+&lt;li>Break point support&lt;/li>
+&lt;li>Variable inspector&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Performance measurement
+&lt;ul>
+&lt;li>During execution CPU and memory usage are monitored and the runtime is tracked&lt;/li>
+&lt;li>The IDE integrates with Intel performance diagnostics tools &lt;code>VTune&lt;/code> adn &lt;code>Advisor&lt;/code>
+&lt;blockquote>
+&lt;p>These tools are also available on Linux as separate applications, but on Windows they integrate in the IDE&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="__key-annoyances__">&lt;strong>Key annoyances&lt;/strong>&lt;/h4>
+&lt;ul>
+&lt;li>There is support for syntax highlighting, but absolutely no support for statement autocompletion&lt;/li>
+&lt;li>There is no support for any kind of code exploration&lt;/li>
+&lt;li>I suggest to write the code in a more feature rich text editor (&lt;a href="https://fortran-lang.org/learn/os_setup/text_editors" target="_blank" rel="noopener">here&lt;/a> are some very useful suggestions) and use VS only for compilation and debugging.&lt;/li>
+&lt;/ul>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>The installation process involves the installation of VS and the Intel HPC Toolkit. It is important to follow the prescribed installation order to get out-of-the-box support.&lt;/p>
+&lt;h3 id="installing-visual-studio">Installing Visual Studio&lt;/h3>
+&lt;ul>
+&lt;li>We need to download VS community edition from the page &lt;a href="https://visualstudio.microsoft.com/it/">https://visualstudio.microsoft.com/it/&lt;/a>&lt;/li>
+&lt;li>Launch the installer and follow the direction
+&lt;ul>
+&lt;li>During the installation process we need to check the box of the &lt;code>Desktop Development with C++&lt;/code> workload&lt;/li>
+&lt;li>If you forget to check this box during the first install you can install the component from the &lt;code>Visual Studio Installer&lt;/code> application that gets installed along VS.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>At the end of the procedure, check that VS is installed on your system launching it.
+&lt;ul>
+&lt;li>On creating a new test project you should still not have options involving Fortran language&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="installing-intel-fortran">Installing Intel Fortran&lt;/h3>
+&lt;ul>
+&lt;li>The intel fortran compiler is part of the &lt;a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/fortran-compiler.html" target="_blank" rel="noopener">oneAPI HPC Toolkit&lt;/a>. On the &lt;a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/hpc-toolkit/download.html?operatingsystem=window&amp;amp;distributions=webdownload&amp;amp;options=online" target="_blank" rel="noopener">download page&lt;/a> we suggest to select an &lt;em>Online&lt;/em> installer.&lt;/li>
+&lt;li>Launch the installer and follow the directions:
+&lt;ul>
+&lt;li>Proceed with a default install (all components are installed)&lt;/li>
+&lt;li>Be sure to check the box &lt;em>Microsoft Visual Studio 2019&lt;/em> in the &lt;em>Integrate IDE&lt;/em> step&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>At the end of the process close the installer.&lt;/li>
+&lt;/ul>
+&lt;h3 id="checking-the-configuration">Checking the configuration&lt;/h3>
+&lt;p>At this point creating a new project in VS an option for Fortran language should appear. We can test the configuration creating a simple `Hello World!&amp;quot; program:&lt;/p>
+&lt;ul>
+&lt;li>From the templates, select &lt;code>Empty Project&lt;/code>&lt;/li>
+&lt;li>In the next screen give it a name and a directory to save it.&lt;/li>
+&lt;li>Create a new file in the project:
+&lt;ul>
+&lt;li>&lt;code>Project &amp;gt; Add New Item (Ctrl + Shift + A)&lt;/code>&lt;/li>
+&lt;li>Select the kind of Fortran file you want to create
+&lt;blockquote>
+&lt;p>&lt;strong>Keep in mind&lt;/strong> that there is no difference between these choices a part from the file extension, all files are simply plain text files. The extension is used by the IDE to chose what format, syntax highlighting or compiler options to use&amp;hellip;&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>In the file we can create a program unit containing the following code :
+&lt;pre>&lt;code class="language-fortran">program hello
+implicit none
+write(*,*) &amp;quot;Hello World from Fortran compiled in Visual Studio 2019&amp;quot;
+pause
+end program hello
+&lt;/code>&lt;/pre>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>To run the program press the &lt;code>Start&lt;/code> in the toolbar, or press the &lt;code>F5&lt;/code> function key&lt;/li>
+&lt;li>If the program runs as expected Visual Studio 2019 should be configured correctly.&lt;/li>
+&lt;/ul>
+&lt;h2 id="general-guidelines-about-visual-studio-2019">General guidelines about Visual Studio 2019&lt;/h2>
+&lt;p>The way Visual Studio manages files, directories, projects, solutions, libraries&amp;hellip;is quite messy, and gave me a headache at first, mainly because the file structure in VS does not reflect at all in the filesystem, which is quite uncanny from a Linux user perspective&amp;hellip;
+So I try to summarize the main working concepts and jargon:&lt;/p>
+&lt;ul>
+&lt;li>The biggest units are &lt;em>solutions&lt;/em>, which can contain many &lt;em>projects&lt;/em>&lt;/li>
+&lt;li>A &lt;em>project&lt;/em> is the basic unit and corresponds to a program or library
+&lt;ul>
+&lt;li>A &lt;em>project&lt;/em> can contain at most one main program unit&lt;/li>
+&lt;li>All source files for modules used by the main program can be contained in the &lt;em>project&lt;/em>&lt;/li>
+&lt;li>Modules that we intend to use in more than one main program need to be compiled in a dedicated &lt;em>project&lt;/em>
+&lt;ul>
+&lt;li>such &lt;em>project&lt;/em> needs to be a &lt;em>static library&lt;/em>&lt;/li>
+&lt;li>It is possible to create &lt;code>dynamically-linked libraries&lt;/code> (&lt;code>dll&lt;/code>s), but more configuration is necessary&lt;/li>
+&lt;li>The dependency of the &lt;em>project&lt;/em> containing the main program on the &lt;em>project&lt;/em> containing the modules needs to be set in the &lt;em>solution&lt;/em> properties to let the compiler know&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>All the compiler and runtime settings are specified on a &lt;em>project&lt;/em> basis in the project properties&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Each &lt;em>project&lt;/em> can &amp;ldquo;contain&amp;rdquo; source files
+&lt;ul>
+&lt;li>Files can be created in the project as in the previous example with &lt;code>Project &amp;gt; Add New Item (Ctrl + Shift + A)&lt;/code>&lt;/li>
+&lt;li>or added from existing files
+&lt;blockquote>
+&lt;p>&lt;strong>Note that&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>all the directories and files in the &lt;em>project&lt;/em> are &lt;em>virtual&lt;/em>, that is they do not reflect their location in the filesystem (for some reason 🤔), so the source files can be kept all in a single directory and assigned to different project&lt;/li>
+&lt;li>Similarly files that in the filesystem are in the same folder as the source files or the project will not appear in the project in VS&lt;/li>
+&lt;li>The modifications to the files are, of course, reflected in the original files whatever their location in the filesystem&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>When &lt;code>▶Start&lt;/code> in the toolbar or the &lt;code>F5&lt;/code> key is pressed, the project (along with its dependencies) is compiled and the mai program is executed
+&lt;ul>
+&lt;li>The &lt;em>configuration&lt;/em> specifies the targets and platform
+&lt;ul>
+&lt;li>By default we have a &lt;code>debug&lt;/code> and a &lt;code>deploy&lt;/code> targets&lt;/li>
+&lt;li>&amp;hellip; and we can compile &lt;code>x86&lt;/code> and &lt;code>x64&lt;/code> Windows binaries&lt;/li>
+&lt;li>The binaries are saved in a directory specified in the &lt;em>project&lt;/em> properties
+&lt;blockquote>
+&lt;p>&lt;strong>Note that&lt;/strong> all setting in the project properties are relative to a single configuration, so pay attention what configuration is being used&amp;hellip; I suggest selecting &lt;code>All Configurations&lt;/code> when changing project properties&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The execution folder (working directory) is specified int he &lt;em>project&lt;/em> properties&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="compiling-a-complex-code-library">Compiling a complex code library&lt;/h2>
+&lt;p>Here I illustrate how to get code compiled and running in Visual Studio 2019 through examples based on my experience with my IgA-based Energetic BEM library &lt;a href="https://github.com/arielsboiardi/IgA-EnergeticBEM" target="_blank" rel="noopener">IgA-EnergeticBEM&lt;/a>.&lt;/p>
+&lt;p>In all the example we are located in a &lt;em>solution&lt;/em> named, for example &lt;code>IgA-EBEM&lt;/code>&lt;/p>
+&lt;h3 id="__program-unit-and-subroutines-are-all-in-one-file__">&lt;strong>Program unit and subroutines are all in one file&lt;/strong>&lt;/h3>
+&lt;p>In this case the compilation is very simple: hitting &lt;code>Start&lt;/code> should do it, if it does not there might be some error in the code.&lt;/p>
+&lt;h3 id="__code-with-modules-in-separate-files__">&lt;strong>Code with modules in separate files&lt;/strong>&lt;/h3>
+&lt;p>This case is again pretty simple: within the same project, Visual Studio automatically determines the dependencies and the right compile order. So we just press &lt;code>F5&lt;/code>&lt;/p>
+&lt;h3 id="__code-with-modules-in-a-shared-library__">&lt;strong>Code with modules in a shared library&lt;/strong>&lt;/h3>
+&lt;p>If we want the modules to be accessible to more than one main program, we can compile them in a &lt;em>static library&lt;/em> and link it to the main program.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Let us assume that the main program source file &lt;code>IgaEBEM_2D_matrix.f90&lt;/code> is contained in a project named &lt;code>matrix&lt;/code> and the modules are in a project named &lt;code>lib_static&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>We can check that the modules compile building just the &lt;code>lib_static&lt;/code> project with the corresponding item of the context menu of the project.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>In &lt;code>Project &amp;gt; Project Dependencies&lt;/code> we select &lt;code>matrix&lt;/code> and in &lt;code>Depends on&lt;/code> check &lt;code>lib_static&lt;/code>&lt;/p>
+&lt;p>&lt;img src="deps1.png" alt="Figure 1">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>We can now open the main program source file and press &lt;code>Start&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>In the output log we should see that all modules are being compiled&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>After all the modules the main program gets compiled and executed&lt;/p>
+&lt;p>&lt;img src="compilation_log.png" alt="">&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>We can now create other &lt;em>projects&lt;/em> for other main program, and link them against the library with the same procedure&lt;/p>
+&lt;ul>
+&lt;li>In our code library such programs programs would be
+&lt;ul>
+&lt;li>&lt;code>IgaEBEM_2D_rhs.f90&lt;/code>, for the computation of the right-hand side&lt;/li>
+&lt;li>&lt;code>IgaEBEM_2D_solver.f90&lt;/code>, which implements the time marching solver.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="__programs-exchanging-files__">&lt;strong>Programs exchanging files&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>Our programs are designed to exchange data saved on files, we therefore need to set the same working directory for all the projects tht contain a program unit.
+&lt;ul>
+&lt;li>To do so in each project properties under &lt;code>Debugging&lt;/code> we set &lt;code>Working Directory&lt;/code> to &lt;code>$(SolutionDir)/run_dir&lt;/code>, so the programs are executed in a subdirectory &lt;code>run_dir&lt;/code> of the directory containing all the solution.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The &lt;code>contorno.dat&lt;/code> file and other files needed during the program runtime need to be in &lt;code>run_dir&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="__compilation-of-parallel-code-using-mpi__">&lt;strong>Compilation of parallel code using MPI&lt;/strong>&lt;/h3>
+&lt;p>To compile the code taking advantage of the parallel implementation&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>In each project properties under &lt;code>Configuration Properties &amp;gt; Fortran &amp;gt; Language &amp;gt; Process OpenMP Directives&lt;/code> we select &lt;code>Generate Parallel Code&lt;/code>&lt;/p>
+&lt;p>&lt;img src="qomp.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Note that&lt;/strong> also the library needs to be compiled with the &lt;code>\Qopenmp&lt;/code> flag&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>In this article I &lt;del>hopefully&lt;/del> gave a complete introduction to the usage of Visual Studio 2019 and Intel Fortran Compiler aimed at numerical analysts and Fortran developers who need or want to work on Windows.&lt;/p>
+&lt;p>I will continue to do my coding on Linux, as more powerful tools are freely available, many HPC centers, including the one at my University, ase Linux systems, and I have more control on what I am doing, instead of needing to look for mysterious options and learning funny file structures with their own lexicon.&lt;/p></description></item></channel></rss>
