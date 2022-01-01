@@ -29,7 +29,7 @@ experience:
     company_logo: 
     location: Parma
     date_start: '2021-03-01'
-    date_end: ''
+    date_end: '2021-06-01'
     description: |2-
       Materials produces for the studens are availlable in the [teaching section](/teaching) (in italian)
 

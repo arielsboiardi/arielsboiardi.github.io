@@ -6,12 +6,12 @@ title: Ariel S. Boiardi
 superuser: true
 
 # Role/position/tagline
-role: Master's student in Mathematics
+role: PhD student in Mathematics
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: University of Parma
-  url: https://www.unipr.it/
+- name: SISSA
+  url: https://www.sissa.it/
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
@@ -20,8 +20,8 @@ bio:
 interests:
 - Numerical mathematics 
 - Isogeometric analysis
-- Integral equations
-# - Computational geometry
+# - Integral equations
+- Dynamical systems
 - Mathematical physics
 - Computational science
 
@@ -30,7 +30,7 @@ education:
   courses:
   - course: M.Sc. in Mathematics
     institution: Università di Parma
-    year: 2021 (expected)
+    year: 2021
   - course: B.Sc. in Mathematics
     institution: Università di Parma
     year: 2019
@@ -66,7 +66,7 @@ This page is under construction!
 {{% /callout %}}
 
 
-I am Ariel S. Boiardi, currently a master student in Mathematics at University of Parma (Italy).
+I am Ariel S. Boiardi, currently PhD student in Mathematical Analysis, Modelling, and Applications at SISSA in Trieste (Italy).
 
 
 Download my {{< staticref "authors/admin/Boiardi_Ariel_S_CV_EN.pdf" "newtab" >}}resumé{{< /staticref >}}.
