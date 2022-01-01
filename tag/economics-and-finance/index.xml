@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Economics and Finance | Ariel S. Boiardi</title><link>https://arielsboiardi.github.io/tag/economics-and-finance/</link><atom:link href="https://arielsboiardi.github.io/tag/economics-and-finance/index.xml" rel="self" type="application/rss+xml"/><description>Economics and Finance</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Ariel S. Boiardi</copyright><lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate><image><url>https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_512x512_fill_lanczos_center_3.png</url><title>Economics and Finance</title><link>https://arielsboiardi.github.io/tag/economics-and-finance/</link></image><item><title>Double barrier options with FEM</title><link>https://arielsboiardi.github.io/project/fem-bboption/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/fem-bboption/</guid><description>&lt;p>As final assignment for the course of Mathematical models in Finance I developed
 a small FEM code for the evaluation of two-asset basket double barrier option in the Black-Scholes model.&lt;/p>
 &lt;p>Just to get an idea, here is an animation of the time evolution of the payoff
-&lt;img src="https://raw.githubusercontent.com/arielsboiardi/FEM-BBoption/master/demo_animation.gif" alt="">&lt;/p></description></item></channel></rss>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/arielsboiardi/FEM-BBoption/master/demo_animation.gif" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p></description></item></channel></rss>

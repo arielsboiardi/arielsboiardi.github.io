@@ -198,7 +198,19 @@ So I try to summarize the main working concepts and jargon:&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>In &lt;code>Project &amp;gt; Project Dependencies&lt;/code> we select &lt;code>matrix&lt;/code> and in &lt;code>Depends on&lt;/code> check &lt;code>lib_static&lt;/code>&lt;/p>
-&lt;p>&lt;img src="deps1.png" alt="Figure 1">&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Figure 1" srcset="
+/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_6b81e10ecbcbd396870787d5b95251a3.webp 400w,
+/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_b5386251f91400bacd7e73c980de98a7.webp 760w,
+/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://arielsboiardi.github.io/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_6b81e10ecbcbd396870787d5b95251a3.webp"
+width="468"
+height="441"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>We can now open the main program source file and press &lt;code>Start&lt;/code>&lt;/p>
@@ -208,7 +220,19 @@ So I try to summarize the main working concepts and jargon:&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>After all the modules the main program gets compiled and executed&lt;/p>
-&lt;p>&lt;img src="compilation_log.png" alt="">&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="" srcset="
+/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_02961e69186664736e5507090767c18c.webp 400w,
+/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_8343ba34426040b0f480279f9603a309.webp 760w,
+/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://arielsboiardi.github.io/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_02961e69186664736e5507090767c18c.webp"
+width="760"
+height="444"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -238,7 +262,19 @@ So I try to summarize the main working concepts and jargon:&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>In each project properties under &lt;code>Configuration Properties &amp;gt; Fortran &amp;gt; Language &amp;gt; Process OpenMP Directives&lt;/code> we select &lt;code>Generate Parallel Code&lt;/code>&lt;/p>
-&lt;p>&lt;img src="qomp.png" alt="">&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="" srcset="
+/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_80c5e09fcbad9dfbfd20f6f6dde0d044.webp 400w,
+/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_0b3be1826fa4c76c562794868589d1ea.webp 760w,
+/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://arielsboiardi.github.io/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_80c5e09fcbad9dfbfd20f6f6dde0d044.webp"
+width="760"
+height="527"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Note that&lt;/strong> also the library needs to be compiled with the &lt;code>\Qopenmp&lt;/code> flag&lt;/li>
 &lt;/ul>

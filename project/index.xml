@@ -9,14 +9,40 @@
 &lt;/ul></description></item><item><title>Double barrier options with FEM</title><link>https://arielsboiardi.github.io/project/fem-bboption/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/fem-bboption/</guid><description>&lt;p>As final assignment for the course of Mathematical models in Finance I developed
 a small FEM code for the evaluation of two-asset basket double barrier option in the Black-Scholes model.&lt;/p>
 &lt;p>Just to get an idea, here is an animation of the time evolution of the payoff
-&lt;img src="https://raw.githubusercontent.com/arielsboiardi/FEM-BBoption/master/demo_animation.gif" alt="">&lt;/p></description></item><item><title>Adaptive FEM for advection-diffusion problems</title><link>https://arielsboiardi.github.io/project/adfem/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/adfem/</guid><description>&lt;p>My bachelor&amp;rsquo;s thesis work.&lt;/p></description></item><item><title>Hierarchical B-splines for the adaptive solution of advection diffusion problems</title><link>https://arielsboiardi.github.io/project/adahbsplinefem/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/adahbsplinefem/</guid><description/></item><item><title>Newton solver, chaos and fractals</title><link>https://arielsboiardi.github.io/project/newton_chaos_fractals/</link><pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/newton_chaos_fractals/</guid><description>&lt;p>Studying stability properties of the classical Newton solver during the course fo Numerical Mathematics, I took the opportunity to explore the mesmerizing structure of its stable sets, and the chaotic dynamics that lead to the complex roots of polynomials.&lt;/p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/arielsboiardi/FEM-BBoption/master/demo_animation.gif" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p></description></item><item><title>Adaptive FEM for advection-diffusion problems</title><link>https://arielsboiardi.github.io/project/adfem/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/adfem/</guid><description>&lt;p>My bachelor&amp;rsquo;s thesis work.&lt;/p></description></item><item><title>Hierarchical B-splines for the adaptive solution of advection diffusion problems</title><link>https://arielsboiardi.github.io/project/adahbsplinefem/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/adahbsplinefem/</guid><description/></item><item><title>Newton solver, chaos and fractals</title><link>https://arielsboiardi.github.io/project/newton_chaos_fractals/</link><pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/newton_chaos_fractals/</guid><description>&lt;p>Studying stability properties of the classical Newton solver during the course fo Numerical Mathematics, I took the opportunity to explore the mesmerizing structure of its stable sets, and the chaotic dynamics that lead to the complex roots of polynomials.&lt;/p>
 &lt;p>The study has been conducted in MATLAB with some artistic freedom in the choice of colors and shades.&lt;/p>
 &lt;p>The above image represents the stable sets of the Newton solver looking for the complex roots of the polynomial
 $$ x^2(x^3-1). $$
 If we move one of the coincident roots just a bit we get
-&lt;img src="Newton_multi_radici-separate_3M.jpg" alt="">&lt;/p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="" srcset="
+/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_a219772fe0763fa8f89b595961976cb1.webp 400w,
+/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_f61aa68e4c7a347d66b3964c58edefc3.webp 760w,
+/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+src="https://arielsboiardi.github.io/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_a219772fe0763fa8f89b595961976cb1.webp"
+width="760"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
 &lt;p>The so called relaxed newton method instead only converges (fast) to the double root, and avoids the others
-&lt;img src="Newton_relax_1M.jpg" alt="">&lt;/p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="" srcset="
+/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_db70aa34996aecede72e1d0c134494c4.webp 400w,
+/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_13297a7fdd6726e4360504f6647d7e05.webp 760w,
+/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+src="https://arielsboiardi.github.io/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_db70aa34996aecede72e1d0c134494c4.webp"
+width="760"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
 &lt;p>The code is of course available at the link under the title, but might need some fixing: the colors in my code are selected from an hard coded list for better artistic results, but of the roots are too many it may run out of colors.
 Feel free to contribute if you want.
 The code is also nt really documented, it was just to play around.&lt;/p></description></item></channel></rss>

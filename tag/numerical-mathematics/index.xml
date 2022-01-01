@@ -198,7 +198,19 @@ So I try to summarize the main working concepts and jargon:&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>In &lt;code>Project &amp;gt; Project Dependencies&lt;/code> we select &lt;code>matrix&lt;/code> and in &lt;code>Depends on&lt;/code> check &lt;code>lib_static&lt;/code>&lt;/p>
-&lt;p>&lt;img src="deps1.png" alt="Figure 1">&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Figure 1" srcset="
+/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_6b81e10ecbcbd396870787d5b95251a3.webp 400w,
+/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_b5386251f91400bacd7e73c980de98a7.webp 760w,
+/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://arielsboiardi.github.io/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_6b81e10ecbcbd396870787d5b95251a3.webp"
+width="468"
+height="441"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>We can now open the main program source file and press &lt;code>Start&lt;/code>&lt;/p>
@@ -208,7 +220,19 @@ So I try to summarize the main working concepts and jargon:&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>After all the modules the main program gets compiled and executed&lt;/p>
-&lt;p>&lt;img src="compilation_log.png" alt="">&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="" srcset="
+/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_02961e69186664736e5507090767c18c.webp 400w,
+/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_8343ba34426040b0f480279f9603a309.webp 760w,
+/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://arielsboiardi.github.io/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_02961e69186664736e5507090767c18c.webp"
+width="760"
+height="444"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -238,7 +262,19 @@ So I try to summarize the main working concepts and jargon:&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>In each project properties under &lt;code>Configuration Properties &amp;gt; Fortran &amp;gt; Language &amp;gt; Process OpenMP Directives&lt;/code> we select &lt;code>Generate Parallel Code&lt;/code>&lt;/p>
-&lt;p>&lt;img src="qomp.png" alt="">&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="" srcset="
+/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_80c5e09fcbad9dfbfd20f6f6dde0d044.webp 400w,
+/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_0b3be1826fa4c76c562794868589d1ea.webp 760w,
+/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://arielsboiardi.github.io/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_80c5e09fcbad9dfbfd20f6f6dde0d044.webp"
+width="760"
+height="527"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Note that&lt;/strong> also the library needs to be compiled with the &lt;code>\Qopenmp&lt;/code> flag&lt;/li>
 &lt;/ul>
@@ -257,14 +293,40 @@ So I try to summarize the main working concepts and jargon:&lt;/p>
 &lt;/ul></description></item><item><title>Double barrier options with FEM</title><link>https://arielsboiardi.github.io/project/fem-bboption/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/fem-bboption/</guid><description>&lt;p>As final assignment for the course of Mathematical models in Finance I developed
 a small FEM code for the evaluation of two-asset basket double barrier option in the Black-Scholes model.&lt;/p>
 &lt;p>Just to get an idea, here is an animation of the time evolution of the payoff
-&lt;img src="https://raw.githubusercontent.com/arielsboiardi/FEM-BBoption/master/demo_animation.gif" alt="">&lt;/p></description></item><item><title>Adaptive FEM for advection-diffusion problems</title><link>https://arielsboiardi.github.io/project/adfem/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/adfem/</guid><description>&lt;p>My bachelor&amp;rsquo;s thesis work.&lt;/p></description></item><item><title>Hierarchical B-splines for the adaptive solution of advection diffusion problems</title><link>https://arielsboiardi.github.io/project/adahbsplinefem/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/adahbsplinefem/</guid><description/></item><item><title>Newton solver, chaos and fractals</title><link>https://arielsboiardi.github.io/project/newton_chaos_fractals/</link><pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/newton_chaos_fractals/</guid><description>&lt;p>Studying stability properties of the classical Newton solver during the course fo Numerical Mathematics, I took the opportunity to explore the mesmerizing structure of its stable sets, and the chaotic dynamics that lead to the complex roots of polynomials.&lt;/p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/arielsboiardi/FEM-BBoption/master/demo_animation.gif" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p></description></item><item><title>Adaptive FEM for advection-diffusion problems</title><link>https://arielsboiardi.github.io/project/adfem/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/adfem/</guid><description>&lt;p>My bachelor&amp;rsquo;s thesis work.&lt;/p></description></item><item><title>Hierarchical B-splines for the adaptive solution of advection diffusion problems</title><link>https://arielsboiardi.github.io/project/adahbsplinefem/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/adahbsplinefem/</guid><description/></item><item><title>Newton solver, chaos and fractals</title><link>https://arielsboiardi.github.io/project/newton_chaos_fractals/</link><pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/newton_chaos_fractals/</guid><description>&lt;p>Studying stability properties of the classical Newton solver during the course fo Numerical Mathematics, I took the opportunity to explore the mesmerizing structure of its stable sets, and the chaotic dynamics that lead to the complex roots of polynomials.&lt;/p>
 &lt;p>The study has been conducted in MATLAB with some artistic freedom in the choice of colors and shades.&lt;/p>
 &lt;p>The above image represents the stable sets of the Newton solver looking for the complex roots of the polynomial
 $$ x^2(x^3-1). $$
 If we move one of the coincident roots just a bit we get
-&lt;img src="Newton_multi_radici-separate_3M.jpg" alt="">&lt;/p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="" srcset="
+/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_a219772fe0763fa8f89b595961976cb1.webp 400w,
+/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_f61aa68e4c7a347d66b3964c58edefc3.webp 760w,
+/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+src="https://arielsboiardi.github.io/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_a219772fe0763fa8f89b595961976cb1.webp"
+width="760"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
 &lt;p>The so called relaxed newton method instead only converges (fast) to the double root, and avoids the others
-&lt;img src="Newton_relax_1M.jpg" alt="">&lt;/p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="" srcset="
+/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_db70aa34996aecede72e1d0c134494c4.webp 400w,
+/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_13297a7fdd6726e4360504f6647d7e05.webp 760w,
+/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+src="https://arielsboiardi.github.io/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_db70aa34996aecede72e1d0c134494c4.webp"
+width="760"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
 &lt;p>The code is of course available at the link under the title, but might need some fixing: the colors in my code are selected from an hard coded list for better artistic results, but of the roots are too many it may run out of colors.
 Feel free to contribute if you want.
 The code is also nt really documented, it was just to play around.&lt;/p></description></item></channel></rss>
