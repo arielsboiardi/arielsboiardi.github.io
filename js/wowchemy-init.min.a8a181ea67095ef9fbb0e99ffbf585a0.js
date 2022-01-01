@@ -10,7 +10,7 @@
     }
     function d() {
       if (!c())
-        return console.debug("User theming disabled."), {isDarkTheme: window.wc.isSiteThemeDark, themeMode: window.wc.isSiteThemeDark ? 1 : 0};
+        return console.debug("User theming disabled."), { isDarkTheme: window.wc.isSiteThemeDark, themeMode: window.wc.isSiteThemeDark ? 1 : 0 };
       console.debug("User theming enabled.");
       let d2, e2 = b();
       switch (console.debug(`User's theme variation: ${e2}`), e2) {
@@ -24,13 +24,13 @@
           window.matchMedia("(prefers-color-scheme: dark)").matches ? d2 = true : window.matchMedia("(prefers-color-scheme: light)").matches ? d2 = false : d2 = window.wc.isSiteThemeDark;
           break;
       }
-      return d2 && !a.classList.contains("dark") ? (console.debug("Applying Wowchemy dark theme"), document.body.classList.add("dark")) : !d2 && a.classList.contains("dark") && (console.debug("Applying Wowchemy light theme"), document.body.classList.remove("dark")), {isDarkTheme: d2, themeMode: e2};
+      return d2 && !a.classList.contains("dark") ? (console.debug("Applying Wowchemy dark theme"), document.body.classList.add("dark")) : !d2 && a.classList.contains("dark") && (console.debug("Applying Wowchemy light theme"), document.body.classList.remove("dark")), { isDarkTheme: d2, themeMode: e2 };
     }
-    e = true, f = false, window.wc = {darkLightEnabled: e, isSiteThemeDark: f}, window.netlifyIdentity && window.netlifyIdentity.on("init", (a2) => {
+    e = true, f = false, window.wc = { darkLightEnabled: e, isSiteThemeDark: f }, window.netlifyIdentity && window.netlifyIdentity.on("init", (a2) => {
       a2 || window.netlifyIdentity.on("login", () => {
         document.location.href = "/admin/";
       });
-    }), d(), window.PlotlyConfig = {MathJaxConfig: "local"};
+    }), d(), window.PlotlyConfig = { MathJaxConfig: "local" };
   })();
 })();
 /*! Copyright 2016-present George Cushen (https://georgecushen.com/) */

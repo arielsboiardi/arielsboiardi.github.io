@@ -1,12 +1,254 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Wowchemy 5.1.0 for Hugo"><meta name=author content="Ariel S. Boiardi"><meta name=description content="Introduction to the usage of Visual Studio 2019 and Intel Fortran Compiler aimed at numerical analysts and Fortran developers who need or want to work on Windows."><link rel=alternate hreflang=en-us href=https://arielsboiardi.github.io/post/fortran-on-windows/><link rel=preconnect href=https://fonts.gstatic.com crossorigin><meta name=theme-color content="#1565c0"><script src=/js/mathjax-config.js></script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled><script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'"><link rel=stylesheet href=/css/wowchemy.e99c138d2f23efd05bc7edb273d8d0b4.css><link rel=manifest href=/index.webmanifest><link rel=icon type=image/png href=/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_32x32_fill_lanczos_center_2.png><link rel=apple-touch-icon type=image/png href=/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_180x180_fill_lanczos_center_2.png><link rel=canonical href=https://arielsboiardi.github.io/post/fortran-on-windows/><meta property="twitter:card" content="summary"><meta property="og:site_name" content="Ariel S. Boiardi"><meta property="og:url" content="https://arielsboiardi.github.io/post/fortran-on-windows/"><meta property="og:title" content="Visual Studio 2019 for Fortran development on Windows | Ariel S. Boiardi"><meta property="og:description" content="Introduction to the usage of Visual Studio 2019 and Intel Fortran Compiler aimed at numerical analysts and Fortran developers who need or want to work on Windows."><meta property="og:image" content="https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_512x512_fill_lanczos_center_2.png"><meta property="twitter:image" content="https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2021-07-15T00:00:00+00:00"><meta property="article:modified_time" content="2021-07-15T00:00:00+00:00"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://arielsboiardi.github.io/post/fortran-on-windows/"},"headline":"Visual Studio 2019 for Fortran development on Windows","datePublished":"2021-07-15T00:00:00Z","dateModified":"2021-07-15T00:00:00Z","author":{"@type":"Person","name":"Ariel S. Boiardi"},"publisher":{"@type":"Organization","name":"Ariel S. Boiardi","logo":{"@type":"ImageObject","url":"https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_192x192_fill_lanczos_center_2.png"}},"description":"Introduction to the usage of Visual Studio 2019 and Intel Fortran Compiler aimed at numerical analysts and Fortran developers who need or want to work on Windows."}</script><title>Visual Studio 2019 for Fortran development on Windows | Ariel S. Boiardi</title></head><body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=f0b8490a901071082ed2129d8ab63c2c><script src=/js/wowchemy-init.min.f16be01fc8fb2b5885dd67ce942d1185.js></script><aside class=search-modal id=search><div class=container><section class=search-header><div class="row no-gutters justify-content-between mb-3"><div class=col-6><h1>Search</h1></div><div class="col-6 col-search-close"><a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a></div></div><div id=search-box><input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...></div></section><section class=section-search-results><div id=search-hits></div></section></div></aside><div class=page-header><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main><div class=container-xl><button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
-<span><i class="fas fa-bars"></i></span></button><div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content><ul class="navbar-nav d-md-inline-flex"><li class=nav-item><a class=nav-link href=/#about><span>About</span></a></li><li class=nav-item><a class=nav-link href=/#projects><span>Portfolio</span></a></li><li class=nav-item><a class=nav-link href=/#talks><span>Talks</span></a></li><li class=nav-item><a class=nav-link href=/#featured><span>Publications</span></a></li><li class=nav-item><a class=nav-link href=/#contact><span>Contact</span></a></li></ul></div><ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"><li class=nav-item><a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a></li><li class="nav-item dropdown theme-dropdown"><a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences"><i class="fas fa-moon" aria-hidden=true></i></a><div class=dropdown-menu><a href=# class="dropdown-item js-set-theme-light"><span>Light</span></a>
-<a href=# class="dropdown-item js-set-theme-dark"><span>Dark</span></a>
-<a href=# class="dropdown-item js-set-theme-auto"><span>Automatic</span></a></div></li></ul></div></nav></div><div class=page-body><article class=article><div class="article-container pt-3"><h1>Visual Studio 2019 for Fortran development on Windows</h1><p class=page-subtitle>A guide to Fortran development on Windows</p><div class=article-metadata><div><span>Ariel S. Boiardi</span></div><span class=article-date>Jul 15, 2021</span>
-<span class=middot-divider></span><span class=article-reading-time>9 min read</span>
-<span class=middot-divider></span><span class=article-categories><i class="fas fa-folder mr-1"></i><a href=/category/guide/>Guide</a>, <a href=/category/fortran/>Fortran</a>, <a href=/category/coding/>Coding</a></span></div></div><div class=article-container><div class=article-style><ul><li><a href=#introduction>Introduction</a><ul><li><a href=#fortran-compilers>Fortran compilers</a></li><li><a href=#the-visual-studio-ide>The Visual Studio IDE</a><ul><li><a href=#key-features><strong>Key features</strong></a></li><li><a href=#key-annoyances><strong>Key annoyances</strong></a></li></ul></li></ul></li><li><a href=#installation>Installation</a><ul><li><a href=#installing-visual-studio>Installing Visual Studio</a></li><li><a href=#installing-intel-fortran>Installing Intel Fortran</a></li><li><a href=#checking-the-configuration>Checking the configuration</a></li></ul></li><li><a href=#general-guidelines-about-visual-studio-2019>General guidelines about Visual Studio 2019</a></li><li><a href=#compiling-a-complex-code-library>Compiling a complex code library</a><ul><li><a href=#program-unit-and-subroutines-are-all-in-one-file><strong>Program unit and subroutines are all in one file</strong></a></li><li><a href=#code-with-modules-in-separate-files><strong>Code with modules in separate files</strong></a></li><li><a href=#code-with-modules-in-a-shared-library><strong>Code with modules in a shared library</strong></a></li><li><a href=#programs-exchanging-files><strong>Programs exchanging files</strong></a></li><li><a href=#compilation-of-parallel-code-using-mpi><strong>Compilation of parallel code using MPI</strong></a></li></ul></li><li><a href=#conclusion>Conclusion</a></li></ul><blockquote><p><strong><em>NOTE:</em></strong> This guide was tested with the latest versions of the software at the time of writing, that is Visual Studio 2019 and Intel Fortran Compiler version 2021.3.0</p></blockquote><h2 id=introduction>Introduction</h2><p>As of today Fortran is still one of the leading programming languages for high performance and scientific computing; on the other hand HPC and scientific computing are still a highly specialized niche and, as a result, not many user friendly tools are available for Fortran development.</p><p>In this guide Visual Studio 2019 combined with the Intel Fortran compiler is proposed as a <em>do-it-all</em> Fortran IDE for Windows.
-On Linux many different, arguably better, alternatives are available.</p><h3 id=fortran-compilers>Fortran compilers</h3><p>Various Fortran compilers are available, a <a href=https://fortran-lang.org/learn/os_setup target=_blank rel=noopener>comprehensive list</a> is available on the <a href=https://fortran-lang.org/ target=_blank rel=noopener>web site of the Fortran Programming Language</a>.</p><p>I used the following two compilers</p><ul><li>GNU Fortran, or gfortran, part of the GNU Compiler Collection (GCC), is a Free and Open Source Fortran compiler which is still under active development and supports all the features of the latest Fortran 2018 standard. gfortran is natively available on Linux and MacOS; it is possible to get it on Windows with Windows Subsystem for Linux (WSL) and other workarounds.</li><li>The Intel Fortran Compiler (ifort) is a proprietary compiler developed by Intel; it can be used free of charge for non commercial uses as a part of the Intel oneAPI HPC Toolkit. Intel Fortran is natively available on all platforms; but on Windows is virtually the only free option, thanks to the integration with Visual Studio.</li></ul><h3 id=the-visual-studio-ide>The Visual Studio IDE</h3><p>Microsoft Visual Studio 2019 (VS for now on) is a complete and feature rich general purpose IDE; being general purpose it does not natively support Fortran development or other features which might be of interest in the context of scientific computing and, in particular, development of numerical analysis codes.
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.1.0 for Hugo">
+<meta name=author content="Ariel S. Boiardi">
+<meta name=description content="Introduction to the usage of Visual Studio 2019 and Intel Fortran Compiler aimed at numerical analysts and Fortran developers who need or want to work on Windows.">
+<link rel=alternate hreflang=en-us href=https://arielsboiardi.github.io/post/fortran-on-windows/>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<meta name=theme-color content="#1565c0">
+<script src=/js/mathjax-config.js></script>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled>
+<script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
+<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
+<link rel=stylesheet href=/css/wowchemy.e99c138d2f23efd05bc7edb273d8d0b4.css>
+<link rel=manifest href=/index.webmanifest>
+<link rel=icon type=image/png href=/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_180x180_fill_lanczos_center_3.png>
+<link rel=canonical href=https://arielsboiardi.github.io/post/fortran-on-windows/>
+<meta property="twitter:card" content="summary">
+<meta property="og:site_name" content="Ariel S. Boiardi">
+<meta property="og:url" content="https://arielsboiardi.github.io/post/fortran-on-windows/">
+<meta property="og:title" content="Visual Studio 2019 for Fortran development on Windows | Ariel S. Boiardi">
+<meta property="og:description" content="Introduction to the usage of Visual Studio 2019 and Intel Fortran Compiler aimed at numerical analysts and Fortran developers who need or want to work on Windows."><meta property="og:image" content="https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2021-07-15T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-07-15T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://arielsboiardi.github.io/post/fortran-on-windows/"},"headline":"Visual Studio 2019 for Fortran development on Windows","datePublished":"2021-07-15T00:00:00Z","dateModified":"2021-07-15T00:00:00Z","author":{"@type":"Person","name":"Ariel S. Boiardi"},"publisher":{"@type":"Organization","name":"Ariel S. Boiardi","logo":{"@type":"ImageObject","url":"https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_192x192_fill_lanczos_center_3.png"}},"description":"Introduction to the usage of Visual Studio 2019 and Intel Fortran Compiler aimed at numerical analysts and Fortran developers who need or want to work on Windows."}</script>
+<title>Visual Studio 2019 for Fortran development on Windows | Ariel S. Boiardi</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=f0b8490a901071082ed2129d8ab63c2c>
+<script src=/js/wowchemy-init.min.a8a181ea67095ef9fbb0e99ffbf585a0.js></script>
+<aside class=search-modal id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<div class=page-header>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container-xl>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>About</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#projects><span>Portfolio</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#talks><span>Talks</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#featured><span>Publications</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#contact><span>Contact</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class=page-body>
+<article class=article>
+<div class="article-container pt-3">
+<h1>Visual Studio 2019 for Fortran development on Windows</h1>
+<p class=page-subtitle>A guide to Fortran development on Windows</p>
+<div class=article-metadata>
+<div>
+<span>
+Ariel S. Boiardi</span>
+</div>
+<span class=article-date>
+Jul 15, 2021
+</span>
+<span class=middot-divider></span>
+<span class=article-reading-time>
+9 min read
+</span>
+<span class=middot-divider></span>
+<span class=article-categories>
+<i class="fas fa-folder mr-1"></i><a href=/category/guide/>Guide</a>, <a href=/category/fortran/>Fortran</a>, <a href=/category/coding/>Coding</a></span>
+</div>
+</div>
+<div class=article-container>
+<div class=article-style>
+<ul>
+<li><a href=#introduction>Introduction</a>
+<ul>
+<li><a href=#fortran-compilers>Fortran compilers</a></li>
+<li><a href=#the-visual-studio-ide>The Visual Studio IDE</a>
+<ul>
+<li><a href=#key-features><strong>Key features</strong></a></li>
+<li><a href=#key-annoyances><strong>Key annoyances</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=#installation>Installation</a>
+<ul>
+<li><a href=#installing-visual-studio>Installing Visual Studio</a></li>
+<li><a href=#installing-intel-fortran>Installing Intel Fortran</a></li>
+<li><a href=#checking-the-configuration>Checking the configuration</a></li>
+</ul>
+</li>
+<li><a href=#general-guidelines-about-visual-studio-2019>General guidelines about Visual Studio 2019</a></li>
+<li><a href=#compiling-a-complex-code-library>Compiling a complex code library</a>
+<ul>
+<li><a href=#program-unit-and-subroutines-are-all-in-one-file><strong>Program unit and subroutines are all in one file</strong></a></li>
+<li><a href=#code-with-modules-in-separate-files><strong>Code with modules in separate files</strong></a></li>
+<li><a href=#code-with-modules-in-a-shared-library><strong>Code with modules in a shared library</strong></a></li>
+<li><a href=#programs-exchanging-files><strong>Programs exchanging files</strong></a></li>
+<li><a href=#compilation-of-parallel-code-using-mpi><strong>Compilation of parallel code using MPI</strong></a></li>
+</ul>
+</li>
+<li><a href=#conclusion>Conclusion</a></li>
+</ul>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> This guide was tested with the latest versions of the software at the time of writing, that is Visual Studio 2019 and Intel Fortran Compiler version 2021.3.0</p>
+</blockquote>
+<h2 id=introduction>Introduction</h2>
+<p>As of today Fortran is still one of the leading programming languages for high performance and scientific computing; on the other hand HPC and scientific computing are still a highly specialized niche and, as a result, not many user friendly tools are available for Fortran development.</p>
+<p>In this guide Visual Studio 2019 combined with the Intel Fortran compiler is proposed as a <em>do-it-all</em> Fortran IDE for Windows.
+On Linux many different, arguably better, alternatives are available.</p>
+<h3 id=fortran-compilers>Fortran compilers</h3>
+<p>Various Fortran compilers are available, a <a href=https://fortran-lang.org/learn/os_setup target=_blank rel=noopener>comprehensive list</a> is available on the <a href=https://fortran-lang.org/ target=_blank rel=noopener>web site of the Fortran Programming Language</a>.</p>
+<p>I used the following two compilers</p>
+<ul>
+<li>GNU Fortran, or gfortran, part of the GNU Compiler Collection (GCC), is a Free and Open Source Fortran compiler which is still under active development and supports all the features of the latest Fortran 2018 standard. gfortran is natively available on Linux and MacOS; it is possible to get it on Windows with Windows Subsystem for Linux (WSL) and other workarounds.</li>
+<li>The Intel Fortran Compiler (ifort) is a proprietary compiler developed by Intel; it can be used free of charge for non commercial uses as a part of the Intel oneAPI HPC Toolkit. Intel Fortran is natively available on all platforms; but on Windows is virtually the only free option, thanks to the integration with Visual Studio.</li>
+</ul>
+<h3 id=the-visual-studio-ide>The Visual Studio IDE</h3>
+<p>Microsoft Visual Studio 2019 (VS for now on) is a complete and feature rich general purpose IDE; being general purpose it does not natively support Fortran development or other features which might be of interest in the context of scientific computing and, in particular, development of numerical analysis codes.
 Fortunately though the integration with Intel compiler and diagnostics tools makes it a viable option for our use case.
-VS is closed source and commercial software, but the <em>community edition</em> is free to use for non commercial purpose with a Microsoft account, the minimal functional limitation of this edition are not of any relevance for our use case.</p><h4 id=__key-features__><strong>Key features</strong></h4><p>The key features that I found interesting are:</p><ul><li>Automatic determination of compilation order: on Linux I used the <a href=https://www.gnu.org/software/make/ target=_blank rel=noopener><code>make</code></a> utility to compile and link the various components of my code; on Windows, due to my poor knowledge of its shell and lack of basic tools, I was not able to use <code>make</code>. This was the main reason I resorted to Visual Studio in the first place.</li><li>Support for debugging, signally<ul><li>Execution pause</li><li>Break point support</li><li>Variable inspector</li></ul></li><li>Performance measurement<ul><li>During execution CPU and memory usage are monitored and the runtime is tracked</li><li>The IDE integrates with Intel performance diagnostics tools <code>VTune</code> adn <code>Advisor</code><blockquote><p>These tools are also available on Linux as separate applications, but on Windows they integrate in the IDE</p></blockquote></li></ul></li></ul><h4 id=__key-annoyances__><strong>Key annoyances</strong></h4><ul><li>There is support for syntax highlighting, but absolutely no support for statement autocompletion</li><li>There is no support for any kind of code exploration</li><li>I suggest to write the code in a more feature rich text editor (<a href=https://fortran-lang.org/learn/os_setup/text_editors target=_blank rel=noopener>here</a> are some very useful suggestions) and use VS only for compilation and debugging.</li></ul><h2 id=installation>Installation</h2><p>The installation process involves the installation of VS and the Intel HPC Toolkit. It is important to follow the prescribed installation order to get out-of-the-box support.</p><h3 id=installing-visual-studio>Installing Visual Studio</h3><ul><li>We need to download VS community edition from the page <a href=https://visualstudio.microsoft.com/it/>https://visualstudio.microsoft.com/it/</a></li><li>Launch the installer and follow the direction<ul><li>During the installation process we need to check the box of the <code>Desktop Development with C++</code> workload</li><li>If you forget to check this box during the first install you can install the component from the <code>Visual Studio Installer</code> application that gets installed along VS.</li></ul></li><li>At the end of the procedure, check that VS is installed on your system launching it.<ul><li>On creating a new test project you should still not have options involving Fortran language&mldr;</li></ul></li></ul><h3 id=installing-intel-fortran>Installing Intel Fortran</h3><ul><li>The intel fortran compiler is part of the <a href=https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/fortran-compiler.html target=_blank rel=noopener>oneAPI HPC Toolkit</a>. On the <a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/hpc-toolkit/download.html?operatingsystem=window&distributions=webdownload&options=online" target=_blank rel=noopener>download page</a> we suggest to select an <em>Online</em> installer.</li><li>Launch the installer and follow the directions:<ul><li>Proceed with a default install (all components are installed)</li><li>Be sure to check the box <em>Microsoft Visual Studio 2019</em> in the <em>Integrate IDE</em> step</li></ul></li><li>At the end of the process close the installer.</li></ul><h3 id=checking-the-configuration>Checking the configuration</h3><p>At this point creating a new project in VS an option for Fortran language should appear. We can test the configuration creating a simple `Hello World!" program:</p><ul><li>From the templates, select <code>Empty Project</code></li><li>In the next screen give it a name and a directory to save it.</li><li>Create a new file in the project:<ul><li><code>Project > Add New Item (Ctrl + Shift + A)</code></li><li>Select the kind of Fortran file you want to create<blockquote><p><strong>Keep in mind</strong> that there is no difference between these choices a part from the file extension, all files are simply plain text files. The extension is used by the IDE to chose what format, syntax highlighting or compiler options to use&mldr;</p></blockquote></li><li>In the file we can create a program unit containing the following code :<pre><code class=language-fortran>program hello 
+VS is closed source and commercial software, but the <em>community edition</em> is free to use for non commercial purpose with a Microsoft account, the minimal functional limitation of this edition are not of any relevance for our use case.</p>
+<h4 id=__key-features__><strong>Key features</strong></h4>
+<p>The key features that I found interesting are:</p>
+<ul>
+<li>Automatic determination of compilation order: on Linux I used the <a href=https://www.gnu.org/software/make/ target=_blank rel=noopener><code>make</code></a> utility to compile and link the various components of my code; on Windows, due to my poor knowledge of its shell and lack of basic tools, I was not able to use <code>make</code>. This was the main reason I resorted to Visual Studio in the first place.</li>
+<li>Support for debugging, signally
+<ul>
+<li>Execution pause</li>
+<li>Break point support</li>
+<li>Variable inspector</li>
+</ul>
+</li>
+<li>Performance measurement
+<ul>
+<li>During execution CPU and memory usage are monitored and the runtime is tracked</li>
+<li>The IDE integrates with Intel performance diagnostics tools <code>VTune</code> adn <code>Advisor</code>
+<blockquote>
+<p>These tools are also available on Linux as separate applications, but on Windows they integrate in the IDE</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id=__key-annoyances__><strong>Key annoyances</strong></h4>
+<ul>
+<li>There is support for syntax highlighting, but absolutely no support for statement autocompletion</li>
+<li>There is no support for any kind of code exploration</li>
+<li>I suggest to write the code in a more feature rich text editor (<a href=https://fortran-lang.org/learn/os_setup/text_editors target=_blank rel=noopener>here</a> are some very useful suggestions) and use VS only for compilation and debugging.</li>
+</ul>
+<h2 id=installation>Installation</h2>
+<p>The installation process involves the installation of VS and the Intel HPC Toolkit. It is important to follow the prescribed installation order to get out-of-the-box support.</p>
+<h3 id=installing-visual-studio>Installing Visual Studio</h3>
+<ul>
+<li>We need to download VS community edition from the page <a href=https://visualstudio.microsoft.com/it/ target=_blank rel=noopener>https://visualstudio.microsoft.com/it/</a></li>
+<li>Launch the installer and follow the direction
+<ul>
+<li>During the installation process we need to check the box of the <code>Desktop Development with C++</code> workload</li>
+<li>If you forget to check this box during the first install you can install the component from the <code>Visual Studio Installer</code> application that gets installed along VS.</li>
+</ul>
+</li>
+<li>At the end of the procedure, check that VS is installed on your system launching it.
+<ul>
+<li>On creating a new test project you should still not have options involving Fortran language&mldr;</li>
+</ul>
+</li>
+</ul>
+<h3 id=installing-intel-fortran>Installing Intel Fortran</h3>
+<ul>
+<li>The intel fortran compiler is part of the <a href=https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/fortran-compiler.html target=_blank rel=noopener>oneAPI HPC Toolkit</a>. On the <a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/hpc-toolkit/download.html?operatingsystem=window&distributions=webdownload&options=online" target=_blank rel=noopener>download page</a> we suggest to select an <em>Online</em> installer.</li>
+<li>Launch the installer and follow the directions:
+<ul>
+<li>Proceed with a default install (all components are installed)</li>
+<li>Be sure to check the box <em>Microsoft Visual Studio 2019</em> in the <em>Integrate IDE</em> step</li>
+</ul>
+</li>
+<li>At the end of the process close the installer.</li>
+</ul>
+<h3 id=checking-the-configuration>Checking the configuration</h3>
+<p>At this point creating a new project in VS an option for Fortran language should appear. We can test the configuration creating a simple `Hello World!" program:</p>
+<ul>
+<li>From the templates, select <code>Empty Project</code></li>
+<li>In the next screen give it a name and a directory to save it.</li>
+<li>Create a new file in the project:
+<ul>
+<li><code>Project > Add New Item (Ctrl + Shift + A)</code></li>
+<li>Select the kind of Fortran file you want to create
+<blockquote>
+<p><strong>Keep in mind</strong> that there is no difference between these choices a part from the file extension, all files are simply plain text files. The extension is used by the IDE to chose what format, syntax highlighting or compiler options to use&mldr;</p>
+</blockquote>
+</li>
+<li>In the file we can create a program unit containing the following code :
+<pre><code class=language-fortran>program hello 
 
     implicit none 
 
@@ -14,13 +256,222 @@ VS is closed source and commercial software, but the <em>community edition</em> 
     pause
 
 end program hello
-</code></pre></li></ul></li><li>To run the program press the <code>Start</code> in the toolbar, or press the <code>F5</code> function key</li><li>If the program runs as expected Visual Studio 2019 should be configured correctly.</li></ul><h2 id=general-guidelines-about-visual-studio-2019>General guidelines about Visual Studio 2019</h2><p>The way Visual Studio manages files, directories, projects, solutions, libraries&mldr;is quite messy, and gave me a headache at first, mainly because the file structure in VS does not reflect at all in the filesystem, which is quite uncanny from a Linux user perspective&mldr;
-So I try to summarize the main working concepts and jargon:</p><ul><li>The biggest units are <em>solutions</em>, which can contain many <em>projects</em></li><li>A <em>project</em> is the basic unit and corresponds to a program or library<ul><li>A <em>project</em> can contain at most one main program unit</li><li>All source files for modules used by the main program can be contained in the <em>project</em></li><li>Modules that we intend to use in more than one main program need to be compiled in a dedicated <em>project</em><ul><li>such <em>project</em> needs to be a <em>static library</em></li><li>It is possible to create <code>dynamically-linked libraries</code> (<code>dll</code>s), but more configuration is necessary</li><li>The dependency of the <em>project</em> containing the main program on the <em>project</em> containing the modules needs to be set in the <em>solution</em> properties to let the compiler know</li></ul></li><li>All the compiler and runtime settings are specified on a <em>project</em> basis in the project properties</li></ul></li><li>Each <em>project</em> can &ldquo;contain&rdquo; source files<ul><li>Files can be created in the project as in the previous example with <code>Project > Add New Item (Ctrl + Shift + A)</code></li><li>or added from existing files<blockquote><p><strong>Note that</strong></p><ul><li>all the directories and files in the <em>project</em> are <em>virtual</em>, that is they do not reflect their location in the filesystem (for some reason 🤔), so the source files can be kept all in a single directory and assigned to different project</li><li>Similarly files that in the filesystem are in the same folder as the source files or the project will not appear in the project in VS</li><li>The modifications to the files are, of course, reflected in the original files whatever their location in the filesystem</li></ul></blockquote></li></ul></li><li>When <code>▶Start</code> in the toolbar or the <code>F5</code> key is pressed, the project (along with its dependencies) is compiled and the mai program is executed<ul><li>The <em>configuration</em> specifies the targets and platform<ul><li>By default we have a <code>debug</code> and a <code>deploy</code> targets</li><li>&mldr; and we can compile <code>x86</code> and <code>x64</code> Windows binaries</li><li>The binaries are saved in a directory specified in the <em>project</em> properties<blockquote><p><strong>Note that</strong> all setting in the project properties are relative to a single configuration, so pay attention what configuration is being used&mldr; I suggest selecting <code>All Configurations</code> when changing project properties</p></blockquote></li></ul></li><li>The execution folder (working directory) is specified int he <em>project</em> properties</li></ul></li></ul><h2 id=compiling-a-complex-code-library>Compiling a complex code library</h2><p>Here I illustrate how to get code compiled and running in Visual Studio 2019 through examples based on my experience with my IgA-based Energetic BEM library <a href=https://github.com/arielsboiardi/IgA-EnergeticBEM target=_blank rel=noopener>IgA-EnergeticBEM</a>.</p><p>In all the example we are located in a <em>solution</em> named, for example <code>IgA-EBEM</code></p><h3 id=__program-unit-and-subroutines-are-all-in-one-file__><strong>Program unit and subroutines are all in one file</strong></h3><p>In this case the compilation is very simple: hitting <code>Start</code> should do it, if it does not there might be some error in the code.</p><h3 id=__code-with-modules-in-separate-files__><strong>Code with modules in separate files</strong></h3><p>This case is again pretty simple: within the same project, Visual Studio automatically determines the dependencies and the right compile order. So we just press <code>F5</code></p><h3 id=__code-with-modules-in-a-shared-library__><strong>Code with modules in a shared library</strong></h3><p>If we want the modules to be accessible to more than one main program, we can compile them in a <em>static library</em> and link it to the main program.</p><ul><li><p>Let us assume that the main program source file <code>IgaEBEM_2D_matrix.f90</code> is contained in a project named <code>matrix</code> and the modules are in a project named <code>lib_static</code></p><ul><li>We can check that the modules compile building just the <code>lib_static</code> project with the corresponding item of the context menu of the project.</li></ul></li><li><p>In <code>Project > Project Dependencies</code> we select <code>matrix</code> and in <code>Depends on</code> check <code>lib_static</code></p><p><img src=deps1.png alt="Figure 1"></p></li><li><p>We can now open the main program source file and press <code>Start</code></p><ul><li><p>In the output log we should see that all modules are being compiled</p></li><li><p>After all the modules the main program gets compiled and executed</p><p><img src=compilation_log.png alt></p></li></ul></li><li><p>We can now create other <em>projects</em> for other main program, and link them against the library with the same procedure</p><ul><li>In our code library such programs programs would be<ul><li><code>IgaEBEM_2D_rhs.f90</code>, for the computation of the right-hand side</li><li><code>IgaEBEM_2D_solver.f90</code>, which implements the time marching solver.</li></ul></li></ul></li></ul><h3 id=__programs-exchanging-files__><strong>Programs exchanging files</strong></h3><ul><li>Our programs are designed to exchange data saved on files, we therefore need to set the same working directory for all the projects tht contain a program unit.<ul><li>To do so in each project properties under <code>Debugging</code> we set <code>Working Directory</code> to <code>$(SolutionDir)/run_dir</code>, so the programs are executed in a subdirectory <code>run_dir</code> of the directory containing all the solution.</li></ul></li><li>The <code>contorno.dat</code> file and other files needed during the program runtime need to be in <code>run_dir</code></li></ul><h3 id=__compilation-of-parallel-code-using-mpi__><strong>Compilation of parallel code using MPI</strong></h3><p>To compile the code taking advantage of the parallel implementation</p><ul><li><p>In each project properties under <code>Configuration Properties > Fortran > Language > Process OpenMP Directives</code> we select <code>Generate Parallel Code</code></p><p><img src=qomp.png alt></p><ul><li><strong>Note that</strong> also the library needs to be compiled with the <code>\Qopenmp</code> flag</li></ul></li></ul><h2 id=conclusion>Conclusion</h2><p>In this article I <del>hopefully</del> gave a complete introduction to the usage of Visual Studio 2019 and Intel Fortran Compiler aimed at numerical analysts and Fortran developers who need or want to work on Windows.</p><p>I will continue to do my coding on Linux, as more powerful tools are freely available, many HPC centers, including the one at my University, ase Linux systems, and I have more control on what I am doing, instead of needing to look for mysterious options and learning funny file structures with their own lexicon.</p></div><div class=article-tags><a class="badge badge-light" href=/tag/guide/>Guide</a>
+</code></pre>
+</li>
+</ul>
+</li>
+<li>To run the program press the <code>Start</code> in the toolbar, or press the <code>F5</code> function key</li>
+<li>If the program runs as expected Visual Studio 2019 should be configured correctly.</li>
+</ul>
+<h2 id=general-guidelines-about-visual-studio-2019>General guidelines about Visual Studio 2019</h2>
+<p>The way Visual Studio manages files, directories, projects, solutions, libraries&mldr;is quite messy, and gave me a headache at first, mainly because the file structure in VS does not reflect at all in the filesystem, which is quite uncanny from a Linux user perspective&mldr;
+So I try to summarize the main working concepts and jargon:</p>
+<ul>
+<li>The biggest units are <em>solutions</em>, which can contain many <em>projects</em></li>
+<li>A <em>project</em> is the basic unit and corresponds to a program or library
+<ul>
+<li>A <em>project</em> can contain at most one main program unit</li>
+<li>All source files for modules used by the main program can be contained in the <em>project</em></li>
+<li>Modules that we intend to use in more than one main program need to be compiled in a dedicated <em>project</em>
+<ul>
+<li>such <em>project</em> needs to be a <em>static library</em></li>
+<li>It is possible to create <code>dynamically-linked libraries</code> (<code>dll</code>s), but more configuration is necessary</li>
+<li>The dependency of the <em>project</em> containing the main program on the <em>project</em> containing the modules needs to be set in the <em>solution</em> properties to let the compiler know</li>
+</ul>
+</li>
+<li>All the compiler and runtime settings are specified on a <em>project</em> basis in the project properties</li>
+</ul>
+</li>
+<li>Each <em>project</em> can &ldquo;contain&rdquo; source files
+<ul>
+<li>Files can be created in the project as in the previous example with <code>Project > Add New Item (Ctrl + Shift + A)</code></li>
+<li>or added from existing files
+<blockquote>
+<p><strong>Note that</strong></p>
+<ul>
+<li>all the directories and files in the <em>project</em> are <em>virtual</em>, that is they do not reflect their location in the filesystem (for some reason 🤔), so the source files can be kept all in a single directory and assigned to different project</li>
+<li>Similarly files that in the filesystem are in the same folder as the source files or the project will not appear in the project in VS</li>
+<li>The modifications to the files are, of course, reflected in the original files whatever their location in the filesystem</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>When <code>▶Start</code> in the toolbar or the <code>F5</code> key is pressed, the project (along with its dependencies) is compiled and the mai program is executed
+<ul>
+<li>The <em>configuration</em> specifies the targets and platform
+<ul>
+<li>By default we have a <code>debug</code> and a <code>deploy</code> targets</li>
+<li>&mldr; and we can compile <code>x86</code> and <code>x64</code> Windows binaries</li>
+<li>The binaries are saved in a directory specified in the <em>project</em> properties
+<blockquote>
+<p><strong>Note that</strong> all setting in the project properties are relative to a single configuration, so pay attention what configuration is being used&mldr; I suggest selecting <code>All Configurations</code> when changing project properties</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>The execution folder (working directory) is specified int he <em>project</em> properties</li>
+</ul>
+</li>
+</ul>
+<h2 id=compiling-a-complex-code-library>Compiling a complex code library</h2>
+<p>Here I illustrate how to get code compiled and running in Visual Studio 2019 through examples based on my experience with my IgA-based Energetic BEM library <a href=https://github.com/arielsboiardi/IgA-EnergeticBEM target=_blank rel=noopener>IgA-EnergeticBEM</a>.</p>
+<p>In all the example we are located in a <em>solution</em> named, for example <code>IgA-EBEM</code></p>
+<h3 id=__program-unit-and-subroutines-are-all-in-one-file__><strong>Program unit and subroutines are all in one file</strong></h3>
+<p>In this case the compilation is very simple: hitting <code>Start</code> should do it, if it does not there might be some error in the code.</p>
+<h3 id=__code-with-modules-in-separate-files__><strong>Code with modules in separate files</strong></h3>
+<p>This case is again pretty simple: within the same project, Visual Studio automatically determines the dependencies and the right compile order. So we just press <code>F5</code></p>
+<h3 id=__code-with-modules-in-a-shared-library__><strong>Code with modules in a shared library</strong></h3>
+<p>If we want the modules to be accessible to more than one main program, we can compile them in a <em>static library</em> and link it to the main program.</p>
+<ul>
+<li>
+<p>Let us assume that the main program source file <code>IgaEBEM_2D_matrix.f90</code> is contained in a project named <code>matrix</code> and the modules are in a project named <code>lib_static</code></p>
+<ul>
+<li>We can check that the modules compile building just the <code>lib_static</code> project with the corresponding item of the context menu of the project.</li>
+</ul>
+</li>
+<li>
+<p>In <code>Project > Project Dependencies</code> we select <code>matrix</code> and in <code>Depends on</code> check <code>lib_static</code></p>
+<p><img src=deps1.png alt="Figure 1"></p>
+</li>
+<li>
+<p>We can now open the main program source file and press <code>Start</code></p>
+<ul>
+<li>
+<p>In the output log we should see that all modules are being compiled</p>
+</li>
+<li>
+<p>After all the modules the main program gets compiled and executed</p>
+<p><img src=compilation_log.png alt></p>
+</li>
+</ul>
+</li>
+<li>
+<p>We can now create other <em>projects</em> for other main program, and link them against the library with the same procedure</p>
+<ul>
+<li>In our code library such programs programs would be
+<ul>
+<li><code>IgaEBEM_2D_rhs.f90</code>, for the computation of the right-hand side</li>
+<li><code>IgaEBEM_2D_solver.f90</code>, which implements the time marching solver.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id=__programs-exchanging-files__><strong>Programs exchanging files</strong></h3>
+<ul>
+<li>Our programs are designed to exchange data saved on files, we therefore need to set the same working directory for all the projects tht contain a program unit.
+<ul>
+<li>To do so in each project properties under <code>Debugging</code> we set <code>Working Directory</code> to <code>$(SolutionDir)/run_dir</code>, so the programs are executed in a subdirectory <code>run_dir</code> of the directory containing all the solution.</li>
+</ul>
+</li>
+<li>The <code>contorno.dat</code> file and other files needed during the program runtime need to be in <code>run_dir</code></li>
+</ul>
+<h3 id=__compilation-of-parallel-code-using-mpi__><strong>Compilation of parallel code using MPI</strong></h3>
+<p>To compile the code taking advantage of the parallel implementation</p>
+<ul>
+<li>
+<p>In each project properties under <code>Configuration Properties > Fortran > Language > Process OpenMP Directives</code> we select <code>Generate Parallel Code</code></p>
+<p><img src=qomp.png alt></p>
+<ul>
+<li><strong>Note that</strong> also the library needs to be compiled with the <code>\Qopenmp</code> flag</li>
+</ul>
+</li>
+</ul>
+<h2 id=conclusion>Conclusion</h2>
+<p>In this article I <del>hopefully</del> gave a complete introduction to the usage of Visual Studio 2019 and Intel Fortran Compiler aimed at numerical analysts and Fortran developers who need or want to work on Windows.</p>
+<p>I will continue to do my coding on Linux, as more powerful tools are freely available, many HPC centers, including the one at my University, ase Linux systems, and I have more control on what I am doing, instead of needing to look for mysterious options and learning funny file structures with their own lexicon.</p>
+</div>
+<div class=article-tags>
+<a class="badge badge-light" href=/tag/guide/>Guide</a>
 <a class="badge badge-light" href=/tag/fortran/>Fortran</a>
 <a class="badge badge-light" href=/tag/coding/>Coding</a>
-<a class="badge badge-light" href=/tag/numerical-mathematics/>Numerical Mathematics</a></div><div class=share-box aria-hidden=true><ul class=share></ul></div><div class="media author-card content-widget-hr"><a href=https://arielsboiardi.github.io/><img class="avatar mr-3 avatar-circle" src=/authors/admin/avatar_hua12adc66bdd66d442ffe62dbb5ed5b43_4060750_270x270_fill_q75_lanczos_center.jpg alt="Ariel S. Boiardi"></a><div class=media-body><h5 class=card-title><a href=https://arielsboiardi.github.io/>Ariel S. Boiardi</a></h5><h6 class=card-subtitle>Master&rsquo;s student in Mathematics</h6><ul class=network-icon aria-hidden=true><li><a href=/#contact><i class="fas fa-envelope"></i></a></li><li><a href=https://github.com/arielsboiardi target=_blank rel=noopener><i class="fab fa-github"></i></a></li><li><a href=/authors/admin/Boiardi_Ariel_S_CV_EN.pdf><i class="ai ai-cv"></i></a></li></ul></div></div><div class="article-widget content-widget-hr"><h3>Related</h3><ul><li><a href=/project/ising_quench/>Equilibrium and dynamics of the Ising model</a></li><li><a href=/project/fem-bboption/>Double barrier options with FEM</a></li><li><a href=/project/adfem/>Adaptive FEM for advection-diffusion problems</a></li><li><a href=/project/adahbsplinefem/>Hierarchical B-splines for the adaptive solution of advection diffusion problems</a></li><li><a href=/project/newton_chaos_fractals/>Newton solver, chaos and fractals</a></li></ul></div></div></article></div><div class=page-footer><div class=container><footer class=site-footer><p class=powered-by>© 2021 Ariel S. Boiardi</p><p class=powered-by>Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>open source</a> website builder that empowers creators.</p></footer></div></div><div id=modal class="modal fade" role=dialog><div class=modal-dialog><div class=modal-content><div class=modal-header><h5 class=modal-title>Cite</h5><button type=button class=close data-dismiss=modal aria-label=Close>
-<span aria-hidden=true>&#215;</span></button></div><div class=modal-body><pre><code class="tex hljs"></code></pre></div><div class=modal-footer><a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank><i class="fas fa-copy"></i> Copy</a>
-<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank><i class="fas fa-download"></i> Download</a><div id=modal-error></div></div></div></div></div><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js></script><script id=search-hit-fuse-template type=text/x-template>
+<a class="badge badge-light" href=/tag/numerical-mathematics/>Numerical Mathematics</a>
+</div>
+<div class=share-box aria-hidden=true>
+<ul class=share>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://arielsboiardi.github.io/><img class="avatar mr-3 avatar-circle" src=/authors/admin/avatar_hua12adc66bdd66d442ffe62dbb5ed5b43_4060750_270x270_fill_q75_lanczos_center.jpg alt="Ariel S. Boiardi"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://arielsboiardi.github.io/>Ariel S. Boiardi</a></h5>
+<h6 class=card-subtitle>PhD student in Mathematics</h6>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=/#contact>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/arielsboiardi target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=/authors/admin/Boiardi_Ariel_S_CV_EN.pdf>
+<i class="ai ai-cv"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="article-widget content-widget-hr">
+<h3>Related</h3>
+<ul>
+<li><a href=/project/ising_quench/>Equilibrium and dynamics of the Ising model</a></li>
+<li><a href=/project/fem-bboption/>Double barrier options with FEM</a></li>
+<li><a href=/project/adfem/>Adaptive FEM for advection-diffusion problems</a></li>
+<li><a href=/project/adahbsplinefem/>Hierarchical B-splines for the adaptive solution of advection diffusion problems</a></li>
+<li><a href=/project/newton_chaos_fractals/>Newton solver, chaos and fractals</a></li>
+</ul>
+</div>
+</div>
+</article>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+© 2022 Ariel S. Boiardi
+</p>
+<p class=powered-by>
+Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js></script>
+<script id=search-hit-fuse-template type=text/x-template>
         <div class="search-hit" id="summary-{{key}}">
           <div class="search-hit-content">
             <div class="search-hit-name">
@@ -30,4 +481,10 @@ So I try to summarize the main working concepts and jargon:</p><ul><li>The bigge
             </div>
           </div>
         </div>
-      </script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script><script src=/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js></script><script src=/en/js/wowchemy.min.ad299157ffff5f8e3caf9b0eff697052.js></script></body></html>
+      </script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
+<script src=/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js></script>
+<script src=/en/js/wowchemy.min.cf8ca859a9b74f8b1cd804621b13e5f1.js></script>
+</body>
+</html>
