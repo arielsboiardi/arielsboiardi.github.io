@@ -20,19 +20,19 @@ twitter: ''
 
 # Contact (edit or remove options as required)
 
-email: arielsurya.boiardi@studenti.unipr.it
+email: aboiardi@sissa.it
 # phone: 888 888 88 88
-# address:
-#   street: 450 Serra Mall
-#   city: Stanford
-#   region: CA
-#   postcode: '94305'
-#   country: United States
-#   country_code: US
+address:
+  street: Via Bonomea 265
+  city: Trieste
+  region: TS
+  postcode: '34136'
+  country: Italy
+  country_code: IT
 # coordinates:
 #   latitude: '37.4275'
 #   longitude: '-122.1697'
-# directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
+directions: Room A-111
 # office_hours:
 #   - 'Monday 10:00 to 13:00'
 #   - 'Wednesday 09:00 to 10:00'
@@ -76,7 +76,10 @@ address_format: en-us
 
 highlight: true
 highlight_languages:
-  - r
+  - python
+  - fortran
+  - matlab 
+  - latex
 math: true
 diagram: false
 privacy_pack: false
@@ -152,7 +155,7 @@ marketing:
   baidu_tongji: ''
 cms:
   branch: master
-  local_backend: false
+  local_backend: true
 icon:
   pack:
     ai: true

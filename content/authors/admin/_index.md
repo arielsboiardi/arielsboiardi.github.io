@@ -21,7 +21,7 @@ interests:
 - Numerical mathematics 
 - Isogeometric analysis
 # - Integral equations
-- Dynamical systems
+# - Dynamical systems
 - Mathematical physics
 - Computational science
 
@@ -43,6 +43,9 @@ social:
 - icon: envelope
   icon_pack: fas
   link: ./#contact
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0001-9346-4602
 - icon: github
   icon_pack: fab
   link: https://github.com/arielsboiardi
