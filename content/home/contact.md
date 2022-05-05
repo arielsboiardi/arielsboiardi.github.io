@@ -15,6 +15,19 @@ subtitle:
 content:
   # Automatically link email and phone or display as text?
   autolink: true
-design:
-  columns: '2'
+  # design:
+  #   columns: '2'
+  email: aboiardi@sissa.it
+  # phone: 
+  address:
+    street: Via Bonomea 265
+    city: Trieste
+    region: TS
+    postcode: '34136'
+    country: Italy
+    country_code: IT
+  coordinates:
+    latitude: '45.680441'
+    longitude: '13.773426'
+  directions: Room A-111
 ---
