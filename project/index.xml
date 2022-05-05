@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Ariel S. Boiardi</title><link>https://arielsboiardi.github.io/project/</link><atom:link href="https://arielsboiardi.github.io/project/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Ariel S. Boiardi</copyright><lastBuildDate>Thu, 13 May 2021 00:00:00 +0000</lastBuildDate><image><url>https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_512x512_fill_lanczos_center_3.png</url><title>Projects</title><link>https://arielsboiardi.github.io/project/</link></image><item><title>Equilibrium and dynamics of the Ising model</title><link>https://arielsboiardi.github.io/project/ising_quench/</link><pubDate>Thu, 13 May 2021 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/ising_quench/</guid><description>&lt;p>As a final assignment for the corse fo Complex Systems I did some &lt;em>in silico&lt;/em> experiments of the quench dynamics of the Ising model.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Ariel S. Boiardi</title><link>https://arielsboiardi.github.io/project/</link><atom:link href="https://arielsboiardi.github.io/project/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 13 May 2021 00:00:00 +0000</lastBuildDate><image><url>https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_512x512_fill_lanczos_center_3.png</url><title>Projects</title><link>https://arielsboiardi.github.io/project/</link></image><item><title>Equilibrium and dynamics of the Ising model</title><link>https://arielsboiardi.github.io/project/ising_quench/</link><pubDate>Thu, 13 May 2021 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/ising_quench/</guid><description>&lt;p>As a final assignment for the corse fo Complex Systems I did some &lt;em>in silico&lt;/em> experiments of the quench dynamics of the Ising model.&lt;/p>
 &lt;!-- Here is an example of a critical quench
 ![](vid_critical.mp4) -->
 &lt;p>&lt;strong>P.S.&lt;/strong>&lt;/p>
@@ -21,10 +21,10 @@ If we move one of the coincident roots just a bit we get
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="" srcset="
-/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_ea11ed1bc16d232546f2770b3a2d4c55.jpg 400w,
-/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_7b1ef3b58d41256bca4a2d17ebce2cc6.jpg 760w,
-/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_1200x1200_fit_q75_lanczos.jpg 1200w"
-src="https://arielsboiardi.github.io/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_ea11ed1bc16d232546f2770b3a2d4c55.jpg"
+/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_304b06e74f188d8286a2cf1d251d55b7.webp 400w,
+/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_f61aa68e4c7a347d66b3964c58edefc3.webp 760w,
+/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+src="https://arielsboiardi.github.io/project/newton_chaos_fractals/Newton_multi_radici-separate_3M_hu37a8c7279b723ef4a7dada66a9ad3b60_1225730_304b06e74f188d8286a2cf1d251d55b7.webp"
 width="760"
 height="760"
 loading="lazy" data-zoomable />&lt;/div>
@@ -34,10 +34,10 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="" srcset="
-/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_ddede6916948ea0abe828f18c049bce5.jpg 400w,
-/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_fdac4a7a9d69e5ac756902790a8fbda8.jpg 760w,
-/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_1200x1200_fit_q75_lanczos.jpg 1200w"
-src="https://arielsboiardi.github.io/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_ddede6916948ea0abe828f18c049bce5.jpg"
+/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_267a6f04da7f7ff3ef2370c0d8d2c940.webp 400w,
+/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_13297a7fdd6726e4360504f6647d7e05.webp 760w,
+/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+src="https://arielsboiardi.github.io/project/newton_chaos_fractals/Newton_relax_1M_hu40d1947c5c1f909172b12384fca65d6b_55690_267a6f04da7f7ff3ef2370c0d8d2c940.webp"
 width="760"
 height="760"
 loading="lazy" data-zoomable />&lt;/div>

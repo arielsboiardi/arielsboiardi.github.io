@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Coding | Ariel S. Boiardi</title><link>https://arielsboiardi.github.io/category/coding/</link><atom:link href="https://arielsboiardi.github.io/category/coding/index.xml" rel="self" type="application/rss+xml"/><description>Coding</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Ariel S. Boiardi</copyright><lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><image><url>https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_512x512_fill_lanczos_center_3.png</url><title>Coding</title><link>https://arielsboiardi.github.io/category/coding/</link></image><item><title>Visual Studio 2019 for Fortran development on Windows</title><link>https://arielsboiardi.github.io/post/fortran-on-windows/</link><pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/post/fortran-on-windows/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Coding | Ariel S. Boiardi</title><link>https://arielsboiardi.github.io/category/coding/</link><atom:link href="https://arielsboiardi.github.io/category/coding/index.xml" rel="self" type="application/rss+xml"/><description>Coding</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><image><url>https://arielsboiardi.github.io/media/icon_hu088c42eba43ce3ce9fdcfdcabcc1212b_793628_512x512_fill_lanczos_center_3.png</url><title>Coding</title><link>https://arielsboiardi.github.io/category/coding/</link></image><item><title>Visual Studio 2019 for Fortran development on Windows</title><link>https://arielsboiardi.github.io/post/fortran-on-windows/</link><pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/post/fortran-on-windows/</guid><description>&lt;ul>
 &lt;li>&lt;a href="#introduction">Introduction&lt;/a>
 &lt;ul>
 &lt;li>&lt;a href="#fortran-compilers">Fortran compilers&lt;/a>&lt;/li>
@@ -117,13 +117,15 @@ VS is closed source and commercial software, but the &lt;em>community edition&lt
 &lt;/blockquote>
 &lt;/li>
 &lt;li>In the file we can create a program unit containing the following code :
-&lt;pre>&lt;code class="language-fortran">program hello
-implicit none
-write(*,*) &amp;quot;Hello World from Fortran compiled in Visual Studio 2019&amp;quot;
-pause
-end program hello
-&lt;/code>&lt;/pre>
-&lt;/li>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fortran" data-lang="fortran">&lt;span class="line">&lt;span class="cl">&lt;span class="k">program &lt;/span>&lt;span class="n">hello&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">implicit none
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k"> write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="s2">&amp;#34;Hello World from Fortran compiled in Visual Studio 2019&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">pause
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">end program &lt;/span>&lt;span class="n">hello&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>To run the program press the &lt;code>Start&lt;/code> in the toolbar, or press the &lt;code>F5&lt;/code> function key&lt;/li>
@@ -202,10 +204,10 @@ So I try to summarize the main working concepts and jargon:&lt;/p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="Figure 1" srcset="
-/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_7eceb740a095447b9ec8a544b01092c6.png 400w,
-/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_8a6963ac82cda28bda9aa21627cb8d35.png 760w,
-/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_1200x1200_fit_lanczos_3.png 1200w"
-src="https://arielsboiardi.github.io/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_7eceb740a095447b9ec8a544b01092c6.png"
+/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_fdc0a032e1283bf763b62368f7747ce8.webp 400w,
+/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_b5386251f91400bacd7e73c980de98a7.webp 760w,
+/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://arielsboiardi.github.io/post/fortran-on-windows/deps1_hufec69174d6507ef1e399e9ac3d2eb2e2_9270_fdc0a032e1283bf763b62368f7747ce8.webp"
 width="468"
 height="441"
 loading="lazy" data-zoomable />&lt;/div>
@@ -224,10 +226,10 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="" srcset="
-/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_e721b1d9d78070c6b1a15fbe0048b67e.png 400w,
-/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_bfceb3f83b216db296c971c2558e5c2e.png 760w,
-/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_1200x1200_fit_lanczos_3.png 1200w"
-src="https://arielsboiardi.github.io/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_e721b1d9d78070c6b1a15fbe0048b67e.png"
+/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_886921aa918dc66f328c3b5fbc444bcc.webp 400w,
+/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_8343ba34426040b0f480279f9603a309.webp 760w,
+/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://arielsboiardi.github.io/post/fortran-on-windows/compilation_log_hu546a0a43b3dc540f9b5e873d99aa9ffc_39766_886921aa918dc66f328c3b5fbc444bcc.webp"
 width="760"
 height="444"
 loading="lazy" data-zoomable />&lt;/div>
@@ -266,10 +268,10 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="" srcset="
-/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_0a55af25ca9eeb5f286a32014c737c66.png 400w,
-/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_21b831c4a594a0d689953149c9776579.png 760w,
-/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_1200x1200_fit_lanczos_3.png 1200w"
-src="https://arielsboiardi.github.io/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_0a55af25ca9eeb5f286a32014c737c66.png"
+/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_bff05a3054ad086de959b182f3477406.webp 400w,
+/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_0b3be1826fa4c76c562794868589d1ea.webp 760w,
+/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://arielsboiardi.github.io/post/fortran-on-windows/qomp_hua1092b06c73c59dcc38208ad7d38a823_44472_bff05a3054ad086de959b182f3477406.webp"
 width="760"
 height="527"
 loading="lazy" data-zoomable />&lt;/div>
