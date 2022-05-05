@@ -72,4 +72,4 @@ This page is under construction!
 I am Ariel S. Boiardi, currently PhD student in Mathematical Analysis, Modelling, and Applications at SISSA in Trieste (Italy).
 
 
-Download my {{< staticref "authors/admin/Boiardi_Ariel_S_CV_EN.pdf" "newtab" >}}resumé{{< /staticref >}}.
+Detailed {{< staticref "authors/admin/Boiardi_Ariel_S_CV_EN.pdf" "newtab" >}}resumé{{< /staticref >}}.
