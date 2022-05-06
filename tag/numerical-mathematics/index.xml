@@ -292,7 +292,29 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;li>The report is still in draft as it was not compulsory and I still did not have time to refine it.&lt;/li>
 &lt;li>The slides contain videos so I had to upload them in a zip file. If the PDF is opened from another location the videos will not play.&lt;/li>
 &lt;li>A compatible PDF viewer is required, &lt;em>KDE Okular would be ideal&lt;/em>.&lt;/li>
-&lt;/ul></description></item><item><title>Double barrier options with FEM</title><link>https://arielsboiardi.github.io/project/fem-bboption/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/fem-bboption/</guid><description>&lt;p>As final assignment for the course of Mathematical models in Finance I developed
+&lt;/ul></description></item><item><title>IGA-Energetic BEM</title><link>https://arielsboiardi.github.io/project/iga-energetic_bem/</link><pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/iga-energetic_bem/</guid><description>
+&lt;div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+&lt;i class="far fa-file-alt pub-icon" aria-hidden="true">&lt;/i>
+&lt;span class="article-metadata li-cite-author">
+&lt;span >
+Alessandra Aimi&lt;/span>, &lt;span >
+Ariel S. Boiardi&lt;/span>
+&lt;/span>
+(2022).
+&lt;a href="https://arielsboiardi.github.io/publication/aimiboiardi22_mdpi/">IGA-Energetic BEM: An Effective Tool for the Numerical Solution of Wave Propagation Problems in Space-Time Domain&lt;/a>.
+&lt;p>
+&lt;a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+data-filename="/publication/aimiboiardi22_mdpi/cite.bib">
+Cite
+&lt;/a>
+&lt;a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arielsboiardi.github.io/project/iga-energetic_bem/">
+Project
+&lt;/a>
+&lt;a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.3390/math10030334" target="_blank" rel="noopener">
+DOI
+&lt;/a>
+&lt;/p>
+&lt;/div></description></item><item><title>Double barrier options with FEM</title><link>https://arielsboiardi.github.io/project/fem-bboption/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://arielsboiardi.github.io/project/fem-bboption/</guid><description>&lt;p>As final assignment for the course of Mathematical models in Finance I developed
 a small FEM code for the evaluation of two-asset basket double barrier option in the Black-Scholes model.&lt;/p>
 &lt;p>Just to get an idea, here is an animation of the time evolution of the payoff
 &lt;figure >
