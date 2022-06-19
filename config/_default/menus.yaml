@@ -17,7 +17,7 @@ main:
     url: '#talks'
     weight: 40
   - name: Publications
-    url: https://orcid.org/0000-0001-9346-4602
+    url: '#publications'
     weight: 50
   - name: Contact
     url: '#contact'

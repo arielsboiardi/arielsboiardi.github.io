@@ -19,9 +19,10 @@ bio:
 # Interests to show in About widget
 interests:
 - Numerical mathematics 
-- Isogeometric analysis
+# - Isogeometric analysis
 # - Integral equations
 # - Dynamical systems
+- Continuum Mechanics
 - Mathematical physics
 - Computational science
 

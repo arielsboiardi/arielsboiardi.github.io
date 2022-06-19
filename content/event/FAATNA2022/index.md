@@ -1,6 +1,6 @@
 ---
 title: FAATNA20>22
-draft: true
+draft: false
 
 event: FAATNA20>22
 event_url: http://web.unibas.it/faatna22/
@@ -14,7 +14,21 @@ address:
   country: Italy
 
 summary: "IGA-Energetic BEM for the numerical solution of 2D wave scattering problem in the space-time domain"
-abstract: "Working on it"
+abstract: "
+  The Energetic Boundary Element Method (BEM) was proposed in 2009 for the numerical solution of 2D exterior wave propagation problems.
+  The hyperbolic differential model is transformed, using the fundamental solution of the wave operator, into a Boundary Integral Equation (BIE), which is then written into an energy-dependent weak form and discretized by a Galerkin-type approach. 
+  Compared to other space-time discretizations of the wave equation, the energetic weak form offers desirable accuracy and stability properties.
+
+  Taking into account the model problem of 2D soft scattering of acoustic waves by open arcs represented by B-spline (or NURBS) curves, 
+  in this talk we discuss some recent advances in the coupling of Energetic BEM with the powerful Isogeometric Analysis (IGA) approach for what concerns discretization in space variables. 
+  Indeed, IGA, proposed by T. J. R. Hughes and collaborators in the context of the FEM to ``bridge the gap'' between design and analysis using B-splines and NURBS as shape functions, naturally fits into BEMs, allowing an exact representation of curvilinear boundaries. 
+
+  In this contribution numerical issues for an efficient integration of the singular kernel related to the fundamental solution of the wave operator and dependent on the propagation wavefront, will be described,
+  highlighting the new challenges posed by the presence of curvilinear boundaries. 
+  Extensive numerical experiments will show, from a numerical point of view, convergence and accuracy of the proposed method as well as the superiority of IGA-Energetic BEM compared to the standard version of the method, based on lagrangian shape functions.
+  Simulations on long time intervals allow to observe the consistency of the proposed method with the stationary IGA-BEM. 
+"
+
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -60,6 +74,8 @@ slides: example
 projects:
 - iga-energetic_bem
 ---
+{{< cite page="/publication/aimiboiardi22_mdpi" view="1" >}}
+
 <!-- 
 {{% callout note %}}
 Click on the **Slides** button above to view the built-in slides feature.
