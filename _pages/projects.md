@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: # list of categories to display, if empty or not defined, all categories will be displayed
 horizontal: false
 ---
 

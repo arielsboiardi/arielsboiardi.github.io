@@ -1,115 +1,57 @@
----
----
-
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title     = {Relativity: the Special and General Theory},
-  author    = {Einstein, Albert},
-  year      = {1920},
-  publisher = {Methuen & Co Ltd},
-  html      = {relativity.html}
+@article{aimi_iga-energetic_2022,
+  bibtex_show={false},
+  abbr = {M.Sc. Thesis},
+	title = {{IGA}-Energetic {BEM}: An Effective Tool for the Numerical Solution of Wave Propagation Problems in Space-Time Domain},
+	volume = {10},
+	rights = {http://creativecommons.org/licenses/by/3.0/},
+	issn = {2227-7390},
+	url = {https://www.mdpi.com/2227-7390/10/3/334},
+	doi = {10.3390/math10030334},
+	shorttitle = {{IGA}-Energetic {BEM}},
+	abstract = {The Energetic Boundary Element Method ({BEM}) is a recent discretization technique for the numerical solution of wave propagation problems, inside bounded domains or outside bounded obstacles. The differential model problem is converted into a Boundary Integral Equation ({BIE}) in the time domain, which is then written into an energy-dependent weak form successively discretized by a Galerkin-type approach. Taking into account the space-time model problem of 2D soft-scattering of acoustic waves by obstacles described by open arcs by B-spline (or {NURBS}) parametrizations, the aim of this paper is to introduce the powerful Isogeometric Analysis ({IGA}) approach into Energetic {BEM} for what concerns discretization in space variables. The same computational benefits already observed for {IGA}-{BEM} in the case of elliptic (i.e., static) problems, is emphasized here because it is gained at every step of the time-marching procedure. Numerical issues for an efficient integration of weakly singular kernels, related to the fundamental solution of the wave operator and dependent on the propagation wavefront, will be described. Effective numerical results will be given and discussed, showing, from a numerical point of view, convergence and accuracy of the proposed method, as well as the superiority of {IGA}-Energetic {BEM} compared to the standard version of the method, which employs classical Lagrangian basis functions.},
+	pages = {334},
+	number = {3},
+	journal = {Mathematics},
+	author = {Aimi, Alessandra and Boiardi, Ariel Surya},
+	year = {2022},
+	langid = {english},
+	keywords = {energetic {BEM}, Isogeometric Analysis, soft-scattering, wave propagation},
+  	preview={IGA-EBEM.png}
 }
 
-@book{einstein1956investigations,
-  bibtex_show = {true},
-  title       = {Investigations on the Theory of the Brownian Movement},
-  author      = {Einstein, Albert},
-  year        = {1956},
-  publisher   = {Courier Corporation},
-  preview     = {brownian-motion.gif}
+@article{boiardi_breaking_2024,
+  bibtex_show={false},
+	title = {Breaking the left-right symmetry in fluttering artificial cilia that perform nonreciprocal oscillations},
+	issn = {1572-9648},
+	url = {https://doi.org/10.1007/s11012-024-01765-7},
+	doi = {10.1007/s11012-024-01765-7},
+	abstract = {Recent investigations on active materials have introduced a new paradigm for soft robotics by showing that a complex response can be obtained from simple stimuli by harnessing dynamic instabilities. In particular, polyelectrolyte hydrogel filaments actuated by a constant electric field have been shown to exhibit self-sustained oscillations as a consequence of flutter instability. Owing to the nonreciprocal nature of the emerging oscillations, these artificial cilia are able to generate flows along the stimulus. Building upon these findings, in this paper we propose a design strategy to break the left-right symmetry in the generated flows, by endowing the filament with a natural curvature at the fabrication stage. We develop a mathematical model based on morphoelastic rod theory to characterize the stability of the equilibrium configurations of the filament, proving the persistence of flutter instability. We show that the emerging oscillations are nonreciprocal and generate thrust at an angle with the stimulus. The results we find at the level of the single cilium open new perspectives on the possible applications of artificial ciliary arrays in soft robotics and microfluidics.},
+	journal = {Meccanica},
+	shortjournal = {Meccanica},
+	author = {Boiardi, Ariel Surya and Marchello, Roberto},
+	urldate = {2024-06-11},
+	year = {2024},
+	langid = {english},
+	keywords = {Artificial cilia, Flutter instability, Active matter, Left-right symmetry breaking, Soft-robotics},
+	preview={angle_flutter.gif}
 }
 
-@article{einstein1950meaning,
-  abbr        = {AJP},
-  bibtex_show = {true},
-  title       = {The meaning of relativity},
-  author      = {Einstein, Albert and Taub, AH},
-  journal     = {American Journal of Physics},
-  volume      = {18},
-  number      = {6},
-  pages       = {403--404},
-  year        = {1950},
-  publisher   = {American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr              = {PhysRev},
-  title             = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author            = {Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract          = {In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal           = {Phys. Rev.},
-  location          = {New Jersey},
-  volume            = {47},
-  issue             = {10},
-  pages             = {777--780},
-  numpages          = {0},
-  year              = {1935},
-  month             = {May},
-  publisher         = aps,
-  doi               = {10.1103/PhysRev.47.777},
-  url               = {https://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html              = {https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf               = {example_pdf.pdf},
-  altmetric         = {248277},
-  dimensions        = {true},
-  google_scholar_id = {qyhmnyLat1gC},
-  video             = {https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info   = {. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation        = {* Example use of superscripts<br>† Albert Einstein},
-  selected          = {true},
-  inspirehep_id     = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title     = {{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author    = {Einstein, A.},
-  journal   = {Annalen der physik},
-  volume    = {322},
-  number    = {8},
-  pages     = {549--560},
-  year      = {1905},
-  publisher = {Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr    = {Ann. Phys.},
-  title   = {Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author  = {Einstein, A.},
-  journal = {Ann. Phys.},
-  volume  = {17},
-  pages   = {549--560},
-  year    = {1905}
-}
-
-@article{einstein1905electrodynamics,
-  title  = {On the electrodynamics of moving bodies},
-  author = {Einstein, A.},
-  year   = {1905}
-}
-
-@article{einstein1905photoelectriceffect,
-  bibtex_show = {true},
-  abbr        = {Ann. Phys.},
-  title       = {{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}},
-  author      = {Albert Einstein},
-  abstract    = {This is the abstract text.},
-  journal     = {Ann. Phys.},
-  volume      = {322},
-  number      = {6},
-  pages       = {132--148},
-  year        = {1905},
-  doi         = {10.1002/andp.19053220607},
-  award       = {Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name  = {Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show = {true},
-  title       = {Letters on wave mechanics},
-  author      = {Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year        = {1967},
-  publisher   = {Vision},
-  preview     = {wave-mechanics.gif},
-  abbr        = {Vision}
+@article{boiardi_minimal_2024,
+	selected={true},
+  	abbr={JMPS},
+  	bibtex_show={false},
+	title = {Minimal actuation and control of a soft hydrogel swimmer from flutter instability},
+	volume = {191},
+	issn = {0022-5096},
+	url = {https://www.sciencedirect.com/science/article/pii/S0022509624002199},
+	doi = {10.1016/j.jmps.2024.105753},
+	abstract = {Micro-organisms propel themselves in viscous environments by the periodic, nonreciprocal beating of slender appendages known as flagella. Active materials have been widely exploited to mimic this form of locomotion. However, the realization of such coordinated beating in biomimetic flagella requires complex actuation modulated in space and time. We prove through experiments on polyelectrolyte hydrogel samples that directed undulatory locomotion of a soft robotic swimmer can be achieved by untethered actuation from a uniform and static electric field. A minimal mathematical model is sufficient to reproduce, and thus explain, the observed behavior. The periodic beating of the swimming hydrogel robot emerges from flutter instability thanks to the interplay between its active and passive reconfigurations in the viscous environment. Interestingly, the flutter-driven soft robot exhibits a form of electrotaxis whereby its swimming trajectory can be controlled by simply reorienting the electric field. Our findings trace the route for the embodiment of mechanical intelligence in soft robotic systems by the exploitation of flutter instability to achieve complex functional responses to simple stimuli. While the experimental study is conducted on millimeter-scale hydrogel swimmers, the design principle we introduce requires simple geometry and is hence amenable for miniaturization via micro-fabrication techniques. We believe it may also be transferred to a wider class of soft active materials.},
+	pages = {105753},
+	journal= {Journal of the Mechanics and Physics of Solids},
+	shortjournal = {Journal of the Mechanics and Physics of Solids},
+	author = {Boiardi, Ariel Surya and Noselli, Giovanni},
+	urldate = {2024-07-07},
+  	year = {2024},
+	keywords = {Flutter instability, Hopf bifurcation, Active materials, Polyelectrolyte hydrogels, Soft robotics},
+  	preview={fluttering_swimmer.gif}
 }
