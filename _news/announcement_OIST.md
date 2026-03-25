@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I am happy to announce that today I am starting a new position as a postdoctoral scholar at the Okinawa Institute of Science and Technology (OIST) in Japan in the group of Prof. Eliot Fried. 
+I am happy to announce that today I am starting a new position as a postdoctoral scholar at the Okinawa Institute of Science and Technology (OIST) in the group of Prof. Eliot Fried. 
