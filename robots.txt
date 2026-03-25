@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://people.sissa.it/~aboiardi/sitemap.xml
+Sitemap: https://arielsboiardi.eu/sitemap.xml
