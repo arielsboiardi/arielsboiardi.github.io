@@ -23,7 +23,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am Ariel S. Boiardi, currently PhD student in Mathematical Analysis, Modelling, and Applications at [SISSA](https://www.sissa.it) and [SAMBA Lab](http://samba.sissa.it/) in Trieste (Italy).
+Hi, welcome to my personal website! 
+My name is Ariel S. Boiardi, and I am currently postdoctoral scholar at [Okinawa Institute of Science and Technology](https://www.oist.jp) (OIST) in the [Mechanics and Materials Unit ](https://www.oist.jp/research/research-units/mmmu) led by Prof. Eliot Fried. 
+
+
+<!-- I am Ariel S. Boiardi, currently PhD student in Mathematical Analysis, Modelling, and Applications at [SISSA](https://www.sissa.it) and [SAMBA Lab](http://samba.sissa.it/) in Trieste (Italy). -->
 <!--  -->
 <!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->
 <!--  -->
