@@ -60,7 +60,12 @@ ninja.data = [{
             },},{id: "news-i-am-happy-to-announce-that-today-i-am-starting-a-new-position-as-a-postdoctoral-scholar-at-the-okinawa-institute-of-science-and-technology-oist-in-the-group-of-prof-eliot-fried",
           title: 'I am happy to announce that today I am starting a new position...',
           description: "",
-          section: "News",},{id: "projects-double-barrier-options-with-fem",
+          section: "News",},{id: "projects-continual-learning-the-impact-of-task-similarity",
+          title: 'Continual learning - the impact of task similarity',
+          description: "Neural networks project on continual learning, investigating the impact of task similarity on the performance of neural networks in a continual learning setting. With Lorenzo Bardone and Harshith Gowrachari.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ContLearn/";
+            },},{id: "projects-double-barrier-options-with-fem",
           title: 'Double barrier options with FEM',
           description: "Pricing double barrier options with the Finite Element Method.",
           section: "Projects",handler: () => {
