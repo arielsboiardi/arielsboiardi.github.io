@@ -60,7 +60,12 @@ ninja.data = [{
             },},{id: "news-i-am-happy-to-announce-that-today-i-am-starting-a-new-position-as-a-postdoctoral-scholar-at-the-okinawa-institute-of-science-and-technology-oist-in-the-group-of-prof-eliot-fried",
           title: 'I am happy to announce that today I am starting a new position...',
           description: "",
-          section: "News",},{id: "projects-continual-learning-the-impact-of-task-similarity",
+          section: "News",},{id: "news-award-for-the-best-phd-thesis-in-materials-mechanics-from-the-aimeta-gma",
+          title: 'Award for the best PhD thesis in Materials Mechanics from the AIMETA GMA...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_prize/";
+            },},{id: "projects-continual-learning-the-impact-of-task-similarity",
           title: 'Continual learning - the impact of task similarity',
           description: "Neural networks project on continual learning, investigating the impact of task similarity on the performance of neural networks in a continual learning setting. With Lorenzo Bardone and Harshith Gowrachari.",
           section: "Projects",handler: () => {
